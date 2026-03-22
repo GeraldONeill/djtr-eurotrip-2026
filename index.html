@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Italy & Croatia Trip Guide — May 23 – June 7, 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Cormorant+Garamond:wght@600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f2ee;
+    color: #1e1e1e;
+    line-height: 1.65;
+    padding: 0;
+  }
+
+  a { color: #8b4513; text-decoration: underline; text-decoration-color: rgba(139,69,19,0.3); text-underline-offset: 2px; }
+  a:hover { text-decoration-color: #8b4513; }
+
+  .hero {
+    background: linear-gradient(135deg, #2c1810 0%, #8b4513 35%, #c17d3e 65%, #e8c170 100%);
+    color: white;
+    padding: 60px 40px 50px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.2em;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+
+  .hero .subtitle {
+    font-size: 1.15em;
+    opacity: 0.85;
+    font-weight: 400;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+  }
+
+  /* ── NAV TABS ── */
+  .nav-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background: #faf8f5;
+    padding: 12px 0;
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-tab {
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    background: white;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .nav-tab:hover { border-color: #c17d3e; color: #c17d3e; text-decoration: none; }
+  .nav-tab.active { background: #8b4513; color: white; border-color: #8b4513; }
+
+  /* ── PHASE BANNER ── */
+  .phase-banner {
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .phase-banner.italy { background: linear-gradient(135deg, #eef3e6 0%, #fdf6ee 100%); border: 1px solid #d4cbb8; }
+  .phase-banner.croatia { background: linear-gradient(135deg, #e8f0f8 0%, #fdf0f4 100%); border: 1px solid #c8d8e8; }
+  .phase-emoji { font-size: 2em; }
+  .phase-banner h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5em; color: #2d2a26; }
+  .phase-banner p { color: #666; font-size: 0.93em; margin-top: 2px; }
+
+  /* ── INFO BOX ── */
+  .info-box {
+    background: #fdf6ee;
+    border-left: 4px solid #c17d3e;
+    padding: 20px 24px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 28px;
+    font-size: 0.95em;
+  }
+  .info-box h3 {
+    color: #8b4513;
+    margin-bottom: 6px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .info-box.warm {
+    background: #fdf6ee;
+    border-left-color: #c17d3e;
+  }
+  .info-box.warm h3 { color: #8b4513; }
+  .info-box.green {
+    background: #eef3e6;
+    border-left-color: #5b7a3a;
+  }
+  .info-box.green h3 { color: #5b7a3a; }
+  .info-box.rose {
+    background: #f5ede8;
+    border-left-color: #b85450;
+  }
+  .info-box.rose h3 { color: #9e3a38; }
+
+  .info-box p { margin-bottom: 8px; color: #444; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  /* ── CALENDAR ── */
+  .calendar-section {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 28px 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    overflow-x: auto;
+  }
+  .calendar-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4em;
+    margin-bottom: 16px;
+  }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    min-width: 600px;
+  }
+  .cal-header {
+    font-size: 0.72em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #888;
+    text-align: center;
+    padding: 6px 0;
+  }
+  .cal-day {
+    border-radius: 10px;
+    padding: 8px 6px;
+    text-align: center;
+    font-size: 0.82em;
+    min-height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #f0f0f0;
+  }
+  .cal-day .date { font-weight: 700; font-size: 1.1em; color: #2d2a26; }
+  .cal-day .cal-label { font-size: 0.72em; color: #555; line-height: 1.3; }
+  .cal-day.empty { border: none; }
+  .cal-day.italy-fam { background: #eef3e6; border-color: #d4dcca; }
+  .cal-day.croatia-rom { background: #e8f0f8; border-color: #c8d8e8; }
+  .cal-day.travel { background: #fdf6ee; border-color: #e8d5b8; }
+  .cal-day.today { box-shadow: 0 0 0 2px #c17d3e; }
+
+  .cal-legend {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+  .cal-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78em;
+    color: #666;
+  }
+  .cal-legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+  }
+
+  /* ── DAY CARDS ── */
+  .day-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+  }
+
+  .day-card .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .day-badge {
+    color: white;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .day-badge.italy { background: #5b7a3a; }
+  .day-badge.croatia { background: #2a6496; }
+  .day-badge.travel-badge { background: #c17d3e; }
+
+  .day-theme {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4em;
+    color: #2d2a26;
+  }
+
+  .who-tag {
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .who-tag.all { background: #eef3e6; color: #5b7a3a; }
+  .who-tag.couple { background: #e8f0f8; color: #2a6496; }
+
+  .day-card p {
+    color: #555;
+    margin-bottom: 14px;
+  }
+
+  .day-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .day-card ul li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    color: #444;
+    border-bottom: 1px solid #f5f3f0;
+  }
+
+  .day-card ul li:last-child { border-bottom: none; }
+
+  .day-card ul li::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 16px;
+    width: 8px;
+    height: 8px;
+    background: #a0522d;
+    border-radius: 50%;
+  }
+
+  .day-card ul li ul { margin-top: 6px; }
+  .day-card ul li ul li::before {
+    background: transparent;
+    border: 2px solid #a0522d;
+  }
+
+  .price-tag {
+    display: inline-block;
+    background: #fdf6ee;
+    color: #8b4513;
+    font-size: 0.82em;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-left: 4px;
+  }
+
+  /* ── LOGISTICS SECTION ── */
+  .logistics-section {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+  }
+  .logistics-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 6px;
+    color: #2d2a26;
+  }
+  .logistics-section .section-subtitle {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  .leg-card {
+    background: #faf8f5;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border: 1px solid #eee;
+  }
+  .leg-card h3 {
+    font-size: 0.95em;
+    font-weight: 700;
+    color: #2d2a26;
+    margin-bottom: 8px;
+  }
+  .leg-card p {
+    color: #555;
+    font-size: 0.92em;
+    margin-bottom: 6px;
+  }
+  .leg-card p:last-child { margin-bottom: 0; }
+
+  /* ── POOL SECTION ── */
+  .pool-section {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+  }
+
+  .pool-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5em;
+    margin-bottom: 6px;
+    color: #2d2a26;
+  }
+
+  .pool-section .pool-subtitle {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+
+  .pool-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: 600px) {
+    .pool-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2em; }
+    .nav-tabs { gap: 4px; }
+    .nav-tab { padding: 6px 12px; font-size: 0.78em; }
+  }
+
+  .pool-cat h3 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8b4513;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #f0e6d6;
+  }
+
+  .pool-cat ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .pool-cat ul li {
+    padding: 6px 0;
+    color: #444;
+    font-size: 0.93em;
+  }
+
+  .pool-cat ul li strong {
+    color: #2d2a26;
+  }
+
+  .pool-cat ul li strong a {
+    color: #2d2a26;
+    text-decoration: underline;
+    text-decoration-color: rgba(26,82,118,0.3);
+  }
+  .pool-cat ul li strong a:hover {
+    color: #8b4513;
+    text-decoration-color: #8b4513;
+  }
+  .pool-cat ul li .note {
+    color: #888;
+    font-size: 0.88em;
+  }
+
+  /* ── ACCOMMODATION TABLE ── */
+  .accom-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88em;
+    margin-top: 12px;
+  }
+  .accom-table th {
+    text-align: left;
+    font-size: 0.78em;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888;
+    padding: 8px 10px;
+    border-bottom: 2px solid #eee;
+  }
+  .accom-table td {
+    padding: 10px;
+    border-bottom: 1px solid #f5f3f0;
+    color: #444;
+    vertical-align: top;
+  }
+  .accom-table tr:last-child td { border-bottom: none; }
+  .accom-table .tier { font-weight: 700; color: #2d2a26; white-space: nowrap; }
+
+  /* ── TIPS SECTION ── */
+  .tips-section {
+    background: #fdf6ee;
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    border: 1px solid #e8d5b8;
+  }
+
+  .tips-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3em;
+    margin-bottom: 14px;
+    color: #2d2a26;
+  }
+
+  .tips-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tips-section ul li {
+    padding: 6px 0 6px 24px;
+    position: relative;
+    color: #555;
+    font-size: 0.93em;
+  }
+
+  .tips-section ul li::before {
+    content: '!';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background: #a0522d;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.7em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ── HEALTH NOTE ── */
+  .health-note {
+    background: #f5efe8;
+    border-left: 4px solid #a07850;
+    padding: 20px 24px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 28px;
+    font-size: 0.93em;
+  }
+  .health-note h3 {
+    color: #8b6540;
+    margin-bottom: 6px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .health-note p { color: #555; margin-bottom: 6px; }
+  .health-note p:last-child { margin-bottom: 0; }
+
+  hr.section-divider {
+    border: none;
+    border-top: 2px dashed #e0e0e0;
+    margin: 40px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Italy & Croatia</h1>
+  <div class="subtitle">May 23 – June 7, 2026 &nbsp;|&nbsp; Family + Couples Trip Guide</div>
+</div>
+
+<div class="container">
+
+  <!-- NAVIGATION -->
+  <div class="nav-tabs">
+    <a href="#calendar" class="nav-tab">Calendar</a>
+    <a href="#logistics" class="nav-tab">Logistics & Booking</a>
+    <a href="#accommodations" class="nav-tab">Accommodations</a>
+    <a href="#florence" class="nav-tab">Florence</a>
+    <a href="#dolomites" class="nav-tab">Dolomites</a>
+    <a href="#venice" class="nav-tab">Venice</a>
+    <a href="#croatia" class="nav-tab">Croatia</a>
+    <a href="#pool" class="nav-tab">The Pool</a>
+    <a href="#tips" class="nav-tab">Tips</a>
+  </div>
+
+  <!-- HEALTH NOTE FOR JENNY -->
+  <div class="health-note">
+    <h3>Jenny's Health — Planning Notes</h3>
+    <p>Jenny has chemo sessions bookending this trip (mid-May before departure, early June after Italy). She's a lifelong hiker and adventurer — the itinerary doesn't hold back. That said, it's built with day-to-day flexibility so she can push hard or ease off depending on how she's feeling. Restaurants are chosen with variety in mind, and Jenny can enjoy all the flavors even with limited alcohol — little sips of Chianti, a taste of the local Amaro. The main things to stay on top of are hydration and sunscreen.</p>
+  </div>
+
+  <!-- ═══════════════ CALENDAR VIEW ═══════════════ -->
+  <div class="calendar-section" id="calendar">
+    <h2>Trip Calendar</h2>
+
+    <div class="cal-grid">
+      <!-- Week headers -->
+      <div class="cal-header">Sat</div>
+      <div class="cal-header">Sun</div>
+      <div class="cal-header">Mon</div>
+      <div class="cal-header">Tue</div>
+      <div class="cal-header">Wed</div>
+      <div class="cal-header">Thu</div>
+      <div class="cal-header">Fri</div>
+
+      <!-- Week 1: May 23–29 -->
+      <div class="cal-day travel">
+        <span class="date">23</span>
+        <span class="cal-label">Arrive Florence</span>
+      </div>
+      <div class="cal-day italy-fam">
+        <span class="date">24</span>
+        <span class="cal-label">Florence: Renaissance Day</span>
+      </div>
+      <div class="cal-day italy-fam">
+        <span class="date">25</span>
+        <span class="cal-label">Florence: Oltrarno & Food</span>
+      </div>
+      <div class="cal-day travel">
+        <span class="date">26</span>
+        <span class="cal-label">Train to Dolomites</span>
+      </div>
+      <div class="cal-day italy-fam">
+        <span class="date">27</span>
+        <span class="cal-label">Dolomites: Hike & Explore</span>
+      </div>
+      <div class="cal-day travel">
+        <span class="date">28</span>
+        <span class="cal-label">Train to Venice</span>
+      </div>
+      <div class="cal-day italy-fam">
+        <span class="date">29</span>
+        <span class="cal-label">Venice: Canals & Culture</span>
+      </div>
+
+      <!-- Week 2: May 30–Jun 5 -->
+      <div class="cal-day travel">
+        <span class="date">30</span>
+        <span class="cal-label">Farewell; Fly to Split</span>
+      </div>
+      <div class="cal-day croatia-rom">
+        <span class="date">31</span>
+        <span class="cal-label">Split: Deep Dive</span>
+      </div>
+      <div class="cal-day travel">
+        <span class="date">Jun 1</span>
+        <span class="cal-label">Ferry to Hvar</span>
+      </div>
+      <div class="cal-day croatia-rom">
+        <span class="date">2</span>
+        <span class="cal-label">Hvar: Wine & Explore</span>
+      </div>
+      <div class="cal-day croatia-rom">
+        <span class="date">3</span>
+        <span class="cal-label">Hvar: Beach & Romance</span>
+      </div>
+      <div class="cal-day travel">
+        <span class="date">4</span>
+        <span class="cal-label">Ferry to Dubrovnik</span>
+      </div>
+      <div class="cal-day croatia-rom">
+        <span class="date">5</span>
+        <span class="cal-label">Dubrovnik: Lokrum & Explore</span>
+      </div>
+
+      <!-- Week 3: Jun 6–7 -->
+      <div class="cal-day croatia-rom">
+        <span class="date">6</span>
+        <span class="cal-label">Dubrovnik: Grand Finale</span>
+      </div>
+      <div class="cal-day travel">
+        <span class="date">7</span>
+        <span class="cal-label">Depart Dubrovnik</span>
+      </div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+      <div class="cal-day empty"></div>
+    </div>
+
+    <div class="cal-legend">
+      <div class="cal-legend-item"><div class="cal-legend-dot" style="background:#eef3e6; border:1px solid #d4dcca;"></div> Italy — All Four</div>
+      <div class="cal-legend-item"><div class="cal-legend-dot" style="background:#e8f0f8; border:1px solid #c8d8e8;"></div> Croatia — Tre & Rory</div>
+      <div class="cal-legend-item"><div class="cal-legend-dot" style="background:#fdf6ee; border:1px solid #e8d5b8;"></div> Travel / Transition Day</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ LOGISTICS & BOOKING ═══════════════ -->
+  <div class="logistics-section" id="logistics">
+    <h2>Logistics & Booking Guide</h2>
+    <p class="section-subtitle">Everything you need to book — flights, trains, ferries, and getting around</p>
+
+    <div class="leg-card">
+      <h3>Flights to Florence (FLR) — All Four</h3>
+      <p><strong>Book on:</strong> <a href="https://www.google.com/travel/flights" target="_blank">Google Flights</a>, <a href="https://www.kayak.com" target="_blank">KAYAK</a>, or directly with airlines. Also check Chase Sapphire travel portal for point redemptions.</p>
+      <p><strong>Typical price range:</strong> $500–$900 round trip from most US cities (or one-way to FLR, return from DBV). <span class="price-tag">$$–$$$</span></p>
+      <p><strong>Tip:</strong> May is shoulder season — one of the cheapest months to fly to Italy. Book ASAP for best fares. Consider multi-city booking: fly into Florence (FLR), out of Venice (VCE) for Dan & Jenny, and out of Dubrovnik (DBV) for you and Rory.</p>
+      <p><strong>For D/J return:</strong> Dan & Jenny will fly home from Venice (VCE) on May 30. Book them a separate one-way or multi-city itinerary.</p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Florence → Dolomites (Bolzano/Ortisei) — Train</h3>
+      <p><strong>Route:</strong> Florence SMN → Bolzano (Trenitalia Frecciarossa or Italo), then local bus/train to Ortisei in Val Gardena (~45 min).</p>
+      <p><strong>Duration:</strong> ~3.5 hours express to Bolzano, +45 min to Ortisei.</p>
+      <p><strong>Price:</strong> €27–€60 per person on high-speed trains when booked in advance. <span class="price-tag">$</span></p>
+      <p><strong>Book on:</strong> <a href="https://www.thetrainline.com" target="_blank">Trainline</a> or <a href="https://www.trenitalia.com" target="_blank">Trenitalia</a>. Book 2–3 months ahead for best prices.</p>
+      <p><strong>Alternative:</strong> Rent a car in Florence (~$50–80/day) for the flexibility to stop in Verona en route and drive into the Dolomites. Parking in Ortisei is manageable. This gives you freedom in the mountains. <span class="price-tag">$$</span></p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Dolomites → Venice — Train</h3>
+      <p><strong>Route:</strong> Bus from Ortisei → Bolzano, then Bolzano → Venezia Santa Lucia (Trenitalia/Italo).</p>
+      <p><strong>Duration:</strong> ~3.5–4 hours total.</p>
+      <p><strong>Price:</strong> €20–€50 per person. <span class="price-tag">$</span></p>
+      <p><strong>Book on:</strong> Same platforms — <a href="https://www.thetrainline.com" target="_blank">Trainline</a> or <a href="https://www.trenitalia.com" target="_blank">Trenitalia</a>.</p>
+      <p><strong>If you rented a car:</strong> Drop it off in Venice at Piazzale Roma (edge of the city). From there, take the vaporetto (water bus) to your hotel area. There are no cars inside Venice.</p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Dan & Jenny: Venice → Home — Flight (May 30)</h3>
+      <p><strong>Airport:</strong> Venice Marco Polo (VCE). Water taxi from the city center to the airport is an unforgettable experience (~€120 for a private taxi, ~€15/pp on the Alilaguna water bus). <span class="price-tag">$–$$$</span></p>
+      <p><strong>Tip:</strong> Book their return flight as part of a multi-city itinerary (US → FLR, VCE → US) for the best price.</p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Tre & Rory: Venice → Split, Croatia — Flight (May 30)</h3>
+      <p><strong>Route:</strong> VCE → SPU. EasyJet, Volotea, and Croatia Airlines fly this route in summer. You're flying the same morning Dan & Jenny fly home — head to the airport together, say your goodbyes at the gate.</p>
+      <p><strong>Duration:</strong> ~1 hour flight.</p>
+      <p><strong>Price:</strong> €30–€80 per person one-way on budget carriers. <span class="price-tag">$</span></p>
+      <p><strong>Book on:</strong> <a href="https://www.google.com/travel/flights" target="_blank">Google Flights</a> or direct with <a href="https://www.easyjet.com" target="_blank">EasyJet</a>. Try to get a midday or early afternoon departure so you arrive in Split with daylight.</p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Split → Hvar — Catamaran Ferry (June 1)</h3>
+      <p><strong>Operators:</strong> Jadrolinija, Kapetan Luka (KRILO), TP Line.</p>
+      <p><strong>Duration:</strong> ~1 hour by high-speed catamaran.</p>
+      <p><strong>Price:</strong> €10–€25 per person. <span class="price-tag">$</span></p>
+      <p><strong>Frequency:</strong> Up to 10+ daily departures in summer. Morning departures recommended.</p>
+      <p><strong>Book on:</strong> <a href="https://www.ferryhopper.com" target="_blank">Ferryhopper</a> or <a href="https://www.croatiaferries.com" target="_blank">CroatiaFerries.com</a>. Book at least a few days ahead in summer.</p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Hvar → Dubrovnik — Catamaran Ferry (June 4)</h3>
+      <p><strong>Operators:</strong> KRILO (departs ~8:50 AM, 3h 15min), TP Line (departs ~10:45 AM, 3h 50min), Jadrolinija (afternoon).</p>
+      <p><strong>Price:</strong> €25–€40 per person. <span class="price-tag">$</span></p>
+      <p><strong>Book on:</strong> Same platforms. Book early — this is one of Croatia's busiest routes.</p>
+    </div>
+
+    <div class="leg-card">
+      <h3>Tre & Rory: Dubrovnik → Home — Flight (June 7)</h3>
+      <p><strong>Airport:</strong> Dubrovnik (DBV). Small airport, ~25 min from Old Town by bus or taxi.</p>
+      <p><strong>Price:</strong> Varies. Consider booking as multi-city: US → FLR / DBV → US.</p>
+      <p><strong>Chase Sapphire:</strong> Check the Chase travel portal for point redemptions on the return leg — Dubrovnik is well connected via European hubs (London, Munich, Amsterdam) for connecting flights home.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════ ACCOMMODATIONS ═══════════════ -->
+  <div class="logistics-section" id="accommodations">
+    <h2>Where to Stay</h2>
+    <p class="section-subtitle">Options at different price tiers — book early, late May/early June fills up</p>
+
+    <div class="leg-card">
+      <h3>Florence — 3 nights (May 23–25)</h3>
+      <p>Best areas: <strong>Santa Croce</strong> (near restaurants, walkable), <strong>Oltrarno / Santo Spirito</strong> (artisan quarter, lively piazzas), or <strong>Santa Maria Novella</strong> (near train station for Dolomites departure).</p>
+      <p>You'll want two rooms (one for D/J, one for you and Rory), or a 2-bedroom apartment.</p>
+      <table class="accom-table">
+        <tr><th>Tier</th><th>Option</th><th>~Price/Night</th></tr>
+        <tr>
+          <td class="tier">Budget-Cute</td>
+          <td><strong>2-bedroom Airbnb in Oltrarno</strong> — charming apartments with courtyard views, walkable to everything. Shared space = family time. <a href="https://www.airbnb.com/s/Florence--Italy/homes" target="_blank">Search Airbnb</a></td>
+          <td><span class="price-tag">$150–$220</span> total</td>
+        </tr>
+        <tr>
+          <td class="tier">Mid-Range</td>
+          <td><strong><a href="https://www.google.com/maps/search/Hotel+Davanzati+Florence" target="_blank">Hotel Davanzati</a></strong> — family-run boutique in a medieval tower near Ponte Vecchio. Free afternoon aperitivo on the terrace. Two rooms.</td>
+          <td><span class="price-tag">$180–$260</span> /room</td>
+        </tr>
+        <tr>
+          <td class="tier">Splurge</td>
+          <td><strong><a href="https://www.google.com/maps/search/Hotel+Lungarno+Florence" target="_blank">Hotel Lungarno</a></strong> — Arno river views, Ferragamo-owned, incredible breakfast terrace. Or <strong>Dimora Palanca</strong> with full spa.</td>
+          <td><span class="price-tag">$300–$450</span> /room</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="leg-card">
+      <h3>Dolomites (Val Gardena / Ortisei) — 2 nights (May 26–27)</h3>
+      <p>Best base: <strong>Ortisei</strong> — charming alpine town with gondola to Seceda, great restaurants, walkable center. End of May is early season, so prices are lower and crowds are lighter.</p>
+      <table class="accom-table">
+        <tr><th>Tier</th><th>Option</th><th>~Price/Night</th></tr>
+        <tr>
+          <td class="tier">Budget-Cute</td>
+          <td><strong>Guesthouse / Garni</strong> — small family-run B&Bs are everywhere in the valley. Cozy, clean, often include breakfast with local cheese and bread. <a href="https://www.booking.com/searchresults.html?ss=Ortisei" target="_blank">Search Booking.com</a></td>
+          <td><span class="price-tag">$80–$140</span> /room</td>
+        </tr>
+        <tr>
+          <td class="tier">Mid-Range</td>
+          <td><strong><a href="https://www.google.com/maps/search/Hotel+Adler+Ortisei" target="_blank">Hotel Adler</a></strong> or similar 3-4 star hotel with spa, mountain views, half-board (breakfast + dinner). Val Gardena hotels often include generous multi-course dinners.</td>
+          <td><span class="price-tag">$160–$280</span> /room</td>
+        </tr>
+        <tr>
+          <td class="tier">Splurge</td>
+          <td><strong><a href="https://www.google.com/maps/search/Gardena+Grodnerhof+Hotel+Ortisei" target="_blank">Gardena Grodnerhof</a></strong> — 5-star with world-class spa, infinity pool overlooking peaks, Michelin-adjacent restaurant.</td>
+          <td><span class="price-tag">$350–$500</span> /room</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="leg-card">
+      <h3>Venice — 2 nights (May 28–29)</h3>
+      <p>Best areas: <strong>Dorsoduro</strong> (near Guggenheim, quieter canals, great restaurants), <strong>Cannaregio</strong> (best value, still central), or <strong>San Marco</strong> (central but pricier).</p>
+      <table class="accom-table">
+        <tr><th>Tier</th><th>Option</th><th>~Price/Night</th></tr>
+        <tr>
+          <td class="tier">Budget-Cute</td>
+          <td><strong>Canal-view Airbnb in Cannaregio</strong> — small apartments with authentic Venetian character. <a href="https://www.airbnb.com/s/Venice--Italy/homes" target="_blank">Search Airbnb</a></td>
+          <td><span class="price-tag">$140–$200</span> total</td>
+        </tr>
+        <tr>
+          <td class="tier">Mid-Range</td>
+          <td><strong><a href="https://www.google.com/maps/search/Novecento+Boutique+Hotel+Venice" target="_blank">Novecento Boutique Hotel</a></strong> — gorgeous interiors, garden breakfast, small canal near Grand Canal. Or <strong>Hotel Giorgione</strong> (14th-century building, family-run).</td>
+          <td><span class="price-tag">$200–$320</span> /room</td>
+        </tr>
+        <tr>
+          <td class="tier">Splurge</td>
+          <td><strong><a href="https://www.google.com/maps/search/Ca'+Maria+Adele+Venice" target="_blank">Ca' Maria Adele</a></strong> — romantic boutique near La Salute, opulent rooms. The "Doge's Room" is wildly over-the-top-beautiful.</td>
+          <td><span class="price-tag">$350–$500</span> /room</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="leg-card">
+      <h3>Split, Croatia — 2 nights (May 30–31) <span class="who-tag couple">Tre & Rory</span></h3>
+      <p>Stay inside or right next to <strong>Diocletian's Palace</strong> — it's the ancient Roman core of the city and where all the best restaurants and bars are.</p>
+      <table class="accom-table">
+        <tr><th>Tier</th><th>Option</th><th>~Price/Night</th></tr>
+        <tr>
+          <td class="tier">Budget-Cute</td>
+          <td><strong>Heritage apartment inside the Palace walls</strong> — there are dozens of charming 1-bed rentals inside the actual ancient palace. Surreal to sleep in a 1,700-year-old building. <a href="https://www.airbnb.com/s/Diocletian's-Palace--Split/homes" target="_blank">Search Airbnb</a></td>
+          <td><span class="price-tag">$80–$130</span></td>
+        </tr>
+        <tr>
+          <td class="tier">Mid-Range</td>
+          <td><strong><a href="https://www.google.com/maps/search/Heritage+Hotel+Antique+Split" target="_blank">Heritage Hotel Antique Split</a></strong> — boutique inside the palace, stone walls, rooftop terrace with cathedral views.</td>
+          <td><span class="price-tag">$150–$220</span></td>
+        </tr>
+        <tr>
+          <td class="tier">Splurge</td>
+          <td><strong><a href="https://www.google.com/maps/search/Hotel+Vestibul+Palace+Split" target="_blank">Hotel Vestibul Palace</a></strong> — literally built into the walls of Diocletian's Palace. Rooms have exposed Roman stonework. Extraordinary.</td>
+          <td><span class="price-tag">$250–$350</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="leg-card">
+      <h3>Hvar — 3 nights (Jun 1–3) <span class="who-tag couple">Tre & Rory</span></h3>
+      <p>Stay in or near <strong>Hvar Town</strong> for nightlife and restaurants, or slightly outside for quieter romance with waterfront views.</p>
+      <table class="accom-table">
+        <tr><th>Tier</th><th>Option</th><th>~Price/Night</th></tr>
+        <tr>
+          <td class="tier">Budget-Cute</td>
+          <td><strong>Apartment near the harbor</strong> — tons of cute studios and 1-beds with sea views a 5-min walk from the main square. <a href="https://www.airbnb.com/s/Hvar--Croatia/homes" target="_blank">Search Airbnb</a></td>
+          <td><span class="price-tag">$80–$140</span></td>
+        </tr>
+        <tr>
+          <td class="tier">Mid-Range</td>
+          <td><strong><a href="https://www.google.com/maps/search/Heritage+Hotel+Park+Hvar" target="_blank">Heritage Hotel Park Hvar</a></strong> — romantic, 5 min from beach, elegant rooms. Or <strong>Adriana Hvar Spa Hotel</strong> — rooftop bar, harbor views, spa.</td>
+          <td><span class="price-tag">$180–$280</span></td>
+        </tr>
+        <tr>
+          <td class="tier">Splurge</td>
+          <td><strong><a href="https://www.google.com/maps/search/Palace+Elisabeth+Hvar" target="_blank">Palace Elisabeth</a></strong> — 5-star overlooking the main square and harbor. Stone-and-velvet interiors. If you splurge one place, this is it.</td>
+          <td><span class="price-tag">$350–$500</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="leg-card">
+      <h3>Dubrovnik — 3 nights (Jun 4–6) <span class="who-tag couple">Tre & Rory</span></h3>
+      <p>Stay in or just outside the <strong>Old Town walls</strong>. Inside is magical but pricier; Ploce and Lapad are good alternatives with easy access.</p>
+      <table class="accom-table">
+        <tr><th>Tier</th><th>Option</th><th>~Price/Night</th></tr>
+        <tr>
+          <td class="tier">Budget-Cute</td>
+          <td><strong>Apartment in Old Town or Ploce</strong> — stone-walled apartments with rooftop terraces are plentiful. <a href="https://www.airbnb.com/s/Dubrovnik--Croatia/homes" target="_blank">Search Airbnb</a></td>
+          <td><span class="price-tag">$100–$160</span></td>
+        </tr>
+        <tr>
+          <td class="tier">Mid-Range</td>
+          <td><strong><a href="https://www.google.com/maps/search/Boutique+Hotel+Stari+Grad+Dubrovnik" target="_blank">Boutique Hotel Stari Grad</a></strong> — right in the Old Town, rooftop breakfast terrace overlooking historic rooftops. Or <strong>Villa Nobile</strong> (garden terrace, 4-star).</td>
+          <td><span class="price-tag">$180–$280</span></td>
+        </tr>
+        <tr>
+          <td class="tier">Splurge</td>
+          <td><strong><a href="https://www.google.com/maps/search/Hotel+Excelsior+Dubrovnik" target="_blank">Hotel Excelsior</a></strong> — waterfront terrace bar with jaw-dropping views of the city walls. Feels like a Bond film. Chase Sapphire check.</td>
+          <td><span class="price-tag">$350–$550</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ═══════════════ PART 1: ITALY ═══════════════ -->
+  <div class="phase-banner italy" id="florence">
+    <div>
+      <h2>Part 1: Italy</h2>
+      <p>May 23–29 &nbsp;|&nbsp; Tre, Rory, Dan & Jenny</p>
+    </div>
+  </div>
+
+  <!-- DAY 1: ARRIVE FLORENCE -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge italy">Sat, May 23</span>
+      <span class="day-theme">Arrive in Florence</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>Land in Florence, get settled, ease into the city. Don't fight the jet lag — lean into the evening energy of Florence instead.</p>
+    <ul>
+      <li>Get to your hotel/apartment, unpack, freshen up. If you arrive early enough, take a walk to get oriented — Florence's historic center is compact and walkable</li>
+      <li><strong>First stop: Piazzale Michelangelo</strong> for the iconic panoramic sunset view over the city — the Duomo, Ponte Vecchio, the Arno, the hills. Best first impression of Florence you can get. It's a 15-min walk uphill from the center, or a quick taxi <span class="price-tag">Free</span></li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Trattoria+Sostanza+Florence" target="_blank">Trattoria Sostanza</a></strong> — a cozy, old-school single-room trattoria. Order the butter chicken and the artichoke omelet. Cash only, no reservations, arrive by 7:30 PM or you're waiting. It's been open since 1869 and hasn't changed <span class="price-tag">$$</span></li>
+      <li><strong>Alternative dinner: <a href="https://www.google.com/maps/search/Trattoria+Mario+Florence" target="_blank">Trattoria Mario</a></strong> — communal tables, pure Florentine cooking, loud and energetic. Lunch-only normally, but worth knowing about for tomorrow <span class="price-tag">$</span></li>
+      <li><strong>After dinner:</strong> Walk over the Ponte Vecchio at night (it's gorgeous lit up), grab gelato at <strong><a href="https://www.google.com/maps/search/Vivoli+gelato+Florence" target="_blank">Vivoli</a></strong> or <strong><a href="https://www.google.com/maps/search/Gelateria+La+Carraia+Florence" target="_blank">La Carraia</a></strong>, and call it a night. Jenny — perfect first night: low energy, high reward</li>
+    </ul>
+  </div>
+
+  <!-- DAY 2: FLORENCE RENAISSANCE -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge italy">Sun, May 24</span>
+      <span class="day-theme">Renaissance Day</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>This is Dan's day. Florence is the birthplace of the Renaissance, and this is where you soak it in — the Uffizi, the Duomo, the David. Build the day around art and history, with food and wine filling the gaps.</p>
+    <ul>
+      <li><strong>Morning: <a href="https://www.uffizi.it/en/the-uffizi" target="_blank">Uffizi Gallery</a></strong> — Botticelli's Birth of Venus, Caravaggio, Leonardo, Raphael. Book timed-entry tickets in advance (they sell out). Go early to beat the crowds. Allow 2–3 hours <span class="price-tag">€20–€25/pp</span></li>
+      <li><strong>Mid-morning break:</strong> Coffee and a pastry at a cafe near the Piazza della Signoria. Sit outside, people-watch, absorb the open-air sculpture gallery that is the piazza itself</li>
+      <li><strong>Late morning: The Duomo complex</strong> — the cathedral is free to enter. The <strong>Brunelleschi's Dome climb</strong> (463 steps) has insane views but is strenuous — Dan, Tre, and Rory could do this while Jenny explores the Baptistery and the museum at ground level. Or everyone skips the climb and just admires from the piazza <span class="price-tag">€30/pp for dome + museum combo</span></li>
+      <li><strong>Lunch: <a href="https://www.google.com/maps/search/Mercato+Centrale+Florence" target="_blank">Mercato Centrale</a></strong> (Central Market) — the upstairs food hall has incredible stalls: lampredotto sandwiches, fresh pasta, truffled everything, local wine by the glass. Casual, delicious, everyone picks what they want <span class="price-tag">$–$$</span></li>
+      <li><strong>Afternoon: <a href="https://www.google.com/maps/search/Galleria+dell'Accademia+Florence" target="_blank">Galleria dell'Accademia</a></strong> — home of Michelangelo's David. Book tickets in advance. It's smaller than the Uffizi so 1–1.5 hours is plenty <span class="price-tag">€16/pp</span></li>
+      <li><strong>Late afternoon:</strong> Stroll through the leather market at <strong>San Lorenzo</strong> — great for gifts, belts, bags, journals. Haggle a little</li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Buca+Mario+Florence" target="_blank">Buca Mario</a></strong> — Florentine bistecca (T-bone steak), rustic cellar atmosphere, one of the oldest restaurants in Florence (1886). Share the bistecca alla fiorentina for the table. Jenny can enjoy the pastas and sides — incredible ribollita <span class="price-tag">$$$</span></li>
+      <li><strong>Wine after dinner:</strong> <strong><a href="https://www.google.com/maps/search/Le+Volpi+e+l'Uva+Florence" target="_blank">Le Volpi e l'Uva</a></strong> — tiny wine bar near Ponte Vecchio, curated selection of small Italian producers. A few sips for Jenny, full pours for the rest <span class="price-tag">$$</span></li>
+      <li><strong>Amaro nightcap:</strong> Ask for a digestivo wherever you end up — Florence is the spiritual home of Amaro. Try <strong>Amaro del Capo</strong> (Calabrian, herbal) or <strong>Amaro Santoni</strong> (a rare, truly local Florentine Amaro that's hard to find even in Italy). Also ask about <strong>Amaro dell'Erborista</strong> — small-batch, family-recipe Amari from Tuscan herbalists. Many trattorias will have their own house Amaro made from secret recipes. Always ask "avete un amaro della casa?"</li>
+    </ul>
+  </div>
+
+  <!-- DAY 3: FLORENCE OLTRARNO -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge italy">Mon, May 25</span>
+      <span class="day-theme">Oltrarno, Artisans & Tuscan Vibes</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>Cross the Arno to the Oltrarno — Florence's bohemian left bank. This is the artisan quarter: leather workshops, paper marbling studios, quiet piazzas with real Florentine neighborhood energy. And this afternoon: you're making pasta together.</p>
+    <ul>
+      <li><strong>Morning:</strong> Wander the <strong>Oltrarno neighborhood</strong> — peek into artisan workshops along Via Maggio and Borgo San Frediano. You'll see bookbinders, leather artisans, and woodworkers at work. Stop at <strong><a href="https://www.google.com/maps/search/Giulio+Giannini+e+Figlio+Florence" target="_blank">Giulio Giannini e Figlio</a></strong> for hand-marbled paper goods (open since 1856) <span class="price-tag">Free to browse</span></li>
+      <li><strong>Optional: <a href="https://www.google.com/maps/search/Palazzo+Pitti+Florence" target="_blank">Palazzo Pitti</a> & Boboli Gardens</strong> — the Medici grand palace with the Palatine Gallery (Raphael, Titian, Caravaggio) and sprawling Renaissance gardens. Dan will love this <span class="price-tag">€16–€22/pp</span></li>
+      <li><strong>Lunch: <a href="https://www.google.com/maps/search/Trattoria+Sabatino+Florence" target="_blank">Trattoria Sabatino</a></strong> — the most authentic, no-frills Florentine lunch you'll find. Home-cooked Tuscan food at absurdly low prices. The ribollita is legendary. Right outside the San Frediano gate <span class="price-tag">$</span></li>
+      <li><strong>Afternoon: <a href="https://www.google.com/maps/search/cooking+class+Florence" target="_blank">Cooking class</a></strong> — learn to make fresh pasta and tiramisu at a small local cooking school. Book through Airbnb Experiences or Cookly — look for small-group classes (6–8 people max) with a local nonna or chef. This is the family activity of the trip. You'll eat what you make, and they usually include wine pairings <span class="price-tag">€60–€90/pp</span></li>
+      <li><strong>Dinner:</strong> You'll likely be full from the cooking class, so keep it light — grab a seat at <strong>Piazza Santo Spirito</strong> for an Aperol Spritz and snacks, or if you're hungry: <strong><a href="https://www.google.com/maps/search/Il+Latini+Florence" target="_blank">Il Latini</a></strong> — boisterous, family-style Tuscan feast with hams hanging from the ceiling <span class="price-tag">$$–$$$</span></li>
+      <li><strong>Evening — Amaro crawl:</strong> This is the night for it. Head to <strong><a href="https://www.google.com/maps/search/COMPANION+Dolceamaro+Bar+Florence" target="_blank">COMPANION Dolceamaro Bar</a></strong> (Via Palazzuolo) — a traditional Italian bar dedicated to the art of Amaro, with an extensive collection of family-recipe digestivi from all over Italy. Ask the bartender to walk you through regional Amari — every region of Italy has its own, and many are guarded family recipes passed down for generations. Then try <strong><a href="https://www.google.com/maps/search/Manifattura+cocktail+bar+Florence" target="_blank">Manifattura</a></strong> — their cocktail menu celebrates indigenous Italian liquor heritage, including Amaro Santoni (a rare Florentine Amaro). Jenny can take little tastes — Amaro is served in small pours anyway <span class="price-tag">$$</span></li>
+    </ul>
+  </div>
+
+  <!-- DAY 4: FLORENCE → DOLOMITES -->
+  <div class="day-card" id="dolomites">
+    <div class="day-header">
+      <span class="day-badge travel-badge">Tue, May 26</span>
+      <span class="day-theme">Travel Day: Into the Mountains</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>Trade Renaissance palaces for Alpine peaks. Today you travel from Florence to the Dolomites. The train ride through the Italian countryside is gorgeous — watch Tuscany fade into the Alps.</p>
+    <ul>
+      <li><strong>Morning:</strong> Grab breakfast near the hotel, then head to <strong>Firenze Santa Maria Novella (SMN)</strong> train station</li>
+      <li><strong>Train: Florence → Bolzano</strong> — Frecciarossa or Italo high-speed train, ~3.5 hours. Book in advance for best seats. Left side of the train has the best views as you approach the Alps <span class="price-tag">€27–€60/pp</span></li>
+      <li><strong>Bolzano → Ortisei:</strong> Local bus (SAD Trasporto Locale, ~45 min) or pre-arranged taxi/shuttle. The bus winds through Val Gardena — your first taste of the Dolomites <span class="price-tag">€5–€10 bus / €60–€80 taxi</span></li>
+      <li><strong>Check in, settle, explore Ortisei:</strong> The town has a beautiful pedestrian center with cafes, churches, and wood-carving shops (Val Gardena is famous for its wood-carving tradition). Walk around, stretch your legs after the train</li>
+      <li><strong>Dinner at your hotel</strong> (if half-board) or at <strong><a href="https://www.google.com/maps/search/Restaurant+Tubladel+Ortisei" target="_blank">Restaurant Tubladel</a></strong> — one of the best in the valley. South Tyrolean cuisine: dumplings, speck, wild game, handmade pasta. The region blends Italian and Austrian food traditions <span class="price-tag">$$–$$$</span></li>
+      <li><strong>Evening:</strong> Early night — you want energy for tomorrow's mountain day. The mountain air will put you to sleep anyway</li>
+    </ul>
+  </div>
+
+  <!-- DAY 5: DOLOMITES -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge italy">Wed, May 27</span>
+      <span class="day-theme">Dolomites: Peaks & Panoramas</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>The big mountain day — and the group splits for the morning. Tre and Rory hit the trails on bikes. Dan and Jenny take the gondola and hike. Everyone regroups for a rifugio lunch in the sky.</p>
+    <ul>
+      <li><strong>Tre & Rory — Morning: Mountain biking in Val Gardena.</strong> The <strong><a href="https://www.val-gardena.com/en/summer/mountain-bike-holiday-dolomites/trail-arena-val-gardena/" target="_blank">Trail Arena Val Gardena</a></strong> is a dedicated bike park with 6 groomed flow trails, freeride tracks, and 13.9 km of lift-accessed riding connected by gondolas. <strong>Important:</strong> the Trail Arena typically opens mid-June, so it may not be fully open yet on May 27. However, the valley's broader <strong>600 km network of mountain bike trails</strong> is rideable by late May — enduro, all-mountain, and cross-country routes through the Dolomites. Rent full-suspension enduro bikes (150–170mm travel) from <a href="https://www.valgardenasport.com/en/bike-e-bike-rental/mountain-bike-full-suspension/" target="_blank">Intersport Val Gardena</a> or local shops in Ortisei. Tell them you want to ride the MTB trails — they'll set you up and point you to the best routes for conditions <span class="price-tag">€40–€70/day bike rental, lift pass extra if open</span></li>
+      <li><strong>Dan & Jenny — Morning: Seceda Gondola + Ridgeline Hike.</strong> Take the gondola from Ortisei directly to the top of Seceda (2,500m). The ridgeline walk is one of the most photographed views in all the Dolomites: jagged spires dropping away into green valleys. It's a 4-hour, two-hut, two-beer trek along a stunning plateau — perfect for Dan and Jenny's hiking chops. Extend or shorten based on energy <span class="price-tag">~€35–€40/pp round trip gondola</span></li>
+      <li><strong>Alternative hike: Alpe di Siusi (Seiser Alm)</strong> — Europe's largest high-altitude Alpine meadow. Gondola up, then gentle walks through wildflower meadows with dramatic mountain backdrops. Extremely photogenic <span class="price-tag">~€35/pp gondola</span></li>
+      <li><strong>Regroup for lunch at a rifugio (mountain hut):</strong> There are mountain huts along the trails serving South Tyrolean food — hearty soups, speck platters, strudel, and beer. Eating at a rifugio with Dolomite peaks all around you is one of those lifetime experiences. Coordinate a meeting point — the huts near Seceda are reachable from multiple trails <span class="price-tag">$–$$</span></li>
+      <li><strong>Afternoon:</strong> Return to Ortisei, grab a coffee and cake at a cafe in the pedestrian zone. Visit a wood-carving workshop or gallery — Val Gardena's tradition goes back centuries</li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Anna+Stuben+Ortisei" target="_blank">Anna Stuben</a></strong> (Michelin-starred but approachable) or a traditional <strong>Stube</strong> (wood-paneled South Tyrolean dining room) at your hotel. Order the canederli (bread dumplings) and apple strudel. End with a local digestivo — South Tyrol makes its own Alpine Amari infused with mountain herbs, pine, and gentian root <span class="price-tag">$$–$$$$</span></li>
+    </ul>
+  </div>
+
+  <!-- DAY 6: DOLOMITES → VENICE -->
+  <div class="day-card" id="venice">
+    <div class="day-header">
+      <span class="day-badge travel-badge">Thu, May 28</span>
+      <span class="day-theme">Mountains to Water: Arrive Venice</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>From Alpine peaks to floating canals. The contrast is part of the magic. Travel day, but Venice rewards you immediately — the moment you step off the train and see the Grand Canal, it hits different. Guided tour this afternoon to get the deep history, then aperitivo on a canal.</p>
+    <ul>
+      <li><strong>Morning:</strong> Breakfast at the hotel, check out, bus from Ortisei → Bolzano (~45 min)</li>
+      <li><strong>Train: Bolzano → Venezia Santa Lucia</strong> — ~3.5 hours. The train drops you right at the edge of Venice's Grand Canal. Step off, and you're there <span class="price-tag">€20–€50/pp</span></li>
+      <li><strong>If you rented a car:</strong> Drop it off at Piazzale Roma (parking garages at the edge of Venice, ~€25–€35/day). Then vaporetto or water taxi to your hotel</li>
+      <li><strong>Getting to your hotel:</strong> Venice has no cars. You'll take a <strong>vaporetto (water bus)</strong> — Line 1 goes down the Grand Canal and is basically a sightseeing tour. Buy a 48-hour vaporetto pass <span class="price-tag">€30 (48hr)</span></li>
+      <li><strong>Afternoon: Guided walking tour.</strong> Book a small-group art and history tour — <strong><a href="https://www.contexttravel.com/cities/venice" target="_blank">Context Travel</a></strong> runs expert-led walks (max 10 people) covering Renaissance art, maritime history, and hidden churches with real historians and art scholars. Or <strong><a href="https://www.tours-italy.com/tour/best-of-venice-small-group-walking-tour-with-st.marks-basilica_111" target="_blank">Avventure Bellissime's Best of Venice tour</a></strong> — St. Mark's Basilica, Doge's Palace, Bridge of Sighs, the Venetian Republic's rise and fall, all with a knowledgeable guide who'll give you the deep history you want. Dan especially will eat this up <span class="price-tag">€60–€120/pp depending on group size</span></li>
+      <li><strong>Sunset aperitivo — this is happening.</strong> Find a canal-side bar and have a proper Venetian Spritz (the original — Venice invented it). <strong><a href="https://www.google.com/maps/search/Il+Caffe+Rosso+Venice" target="_blank">Il Caffè Rosso</a></strong> on Campo Santa Margherita is perfect — lively piazza, cheap drinks, great people-watching. Or <strong>Naranzaria</strong> at the Rialto for Grand Canal views with your Spritz <span class="price-tag">$</span></li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Osteria+alle+Testiere+Venice" target="_blank">Osteria alle Testiere</a></strong> — tiny (10 tables), seafood-focused, one of the best restaurants in Venice. Reserve well in advance. Or <strong><a href="https://www.google.com/maps/search/Trattoria+alla+Madonna+Venice" target="_blank">Trattoria alla Madonna</a></strong> for a more traditional, bustling Venetian experience <span class="price-tag">$$–$$$</span></li>
+      <li><strong>Amaro after dinner:</strong> Venice has its own Amaro tradition — ask for <strong>Amaro Nardini</strong> (from the Veneto, made since 1779) or <strong>Select Aperitivo</strong> (the original Venetian bitter, predating Aperol). Any bacaro worth its salt will have a shelf of regional Amari. The bartender will have opinions — let them guide you</li>
+    </ul>
+  </div>
+
+  <!-- DAY 7: VENICE -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge italy">Fri, May 29</span>
+      <span class="day-theme">Venice: Canals, Art & the Last Supper Together</span>
+      <span class="who-tag all">All Four</span>
+    </div>
+    <p>Last full day together as a family. Venice is magical, overwhelming, and unlike anywhere else on Earth. Make it count — gondola, art, cicchetti, and a Michelin-starred farewell dinner.</p>
+    <ul>
+      <li><strong>Morning: St. Mark's Basilica & Piazza San Marco</strong> — the golden mosaics inside the basilica are jaw-dropping. Go early (opens 9:30 AM) to beat the crowds. Skip-the-line tickets available. The piazza itself is the "drawing room of Europe" (Napoleon said that) <span class="price-tag">€3 basilica / €8 with Pala d'Oro</span></li>
+      <li><strong><a href="https://www.google.com/maps/search/Doge's+Palace+Venice" target="_blank">Doge's Palace</a></strong> — Gothic masterpiece, the seat of Venetian power for 700 years. The Bridge of Sighs connects to the prison. Dan will love the history. Book timed entry <span class="price-tag">€30/pp</span></li>
+      <li><strong>Mid-morning: Cicchetti crawl</strong> — Venice's version of tapas. Pop into bacari (wine bars) and eat small plates at the counter: baccalà mantecato, sarde in saor, polpette. The best crawl area is around the <strong>Rialto Market</strong>. Try <strong><a href="https://www.google.com/maps/search/All'Arco+Venice" target="_blank">All'Arco</a></strong> and <strong><a href="https://www.google.com/maps/search/Cantina+Do+Spade+Venice" target="_blank">Cantina Do Spade</a></strong> <span class="price-tag">$–$$</span></li>
+      <li><strong>Early afternoon: Gondola ride.</strong> All four of you, through the quiet back canals. Yes, it's the thing you have to do — and it earns that reputation. A ~30-min ride in late afternoon light, gliding under stone bridges past crumbling palazzi, is genuinely unforgettable. Up to 6 people per gondola so you all fit <span class="price-tag">€80–€100 for the gondola</span></li>
+      <li><strong>Afternoon:</strong> Choose your own adventure:
+        <ul>
+          <li><strong><a href="https://www.google.com/maps/search/Peggy+Guggenheim+Collection+Venice" target="_blank">Peggy Guggenheim Collection</a></strong> — modern art in a Grand Canal palazzo. Picasso, Pollock, Dalí, Ernst. Wonderful museum, manageable size <span class="price-tag">€16/pp</span></li>
+          <li><strong>Murano & Burano half-day trip</strong> — take the vaporetto to Murano (glass-blowing) and Burano (rainbow-colored houses, lace-making). Covered by your vaporetto pass</li>
+        </ul>
+      </li>
+      <li><strong>Farewell Dinner: <a href="https://www.google.com/maps/search/Ristorante+Quadri+Venice" target="_blank">Ristorante Quadri</a></strong> — Michelin-starred, overlooking Piazza San Marco from an elegant second-floor dining room. Venetian tasting menus, impeccable service, and the view of the basilica lit up at night is extraordinary. This is the family send-off dinner. <strong>Reserve well in advance — this books up.</strong> The experience is worth the splurge <span class="price-tag">$$$$</span></li>
+      <li><strong>After dinner:</strong> Walk Venice at night together one last time. The city is hauntingly beautiful when the day-trippers leave. Cross the Rialto Bridge, follow the Grand Canal, get lost. End the night with a final round of Amari at a bacaro — Venetian <strong>Amaro Montenegro</strong> or <strong>Fernet-Branca</strong> are classic closers</li>
+    </ul>
+  </div>
+
+  <!-- DAY 8: FAREWELL + FLY TO SPLIT -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge travel-badge">Sat, May 30</span>
+      <span class="day-theme">Farewell Venice — Fly to Split</span>
+      <span class="who-tag all">All Four → Splitting Up</span>
+    </div>
+    <p>Bittersweet morning. Breakfast together, hugs, and then you all head to the airport. Dan and Jenny fly home. Tre and Rory fly to Split. By afternoon, the romantic portion begins on the Adriatic.</p>
+    <ul>
+      <li><strong>Morning:</strong> Breakfast together, one last walk. Head to the airport together — Venice Marco Polo (VCE) via Alilaguna water bus (~€15/pp, ~1.5 hrs) or private water taxi (~€120, 30 min). The water taxi through the lagoon is an unforgettable departure <span class="price-tag">$–$$$</span></li>
+      <li><strong>Dan & Jenny:</strong> Fly home from VCE. Book as multi-city itinerary (US → FLR, VCE → US)</li>
+      <li><strong>Tre & Rory: Fly VCE → Split (SPU)</strong> — ~1 hour. EasyJet, Volotea, or Croatia Airlines. Try to book a midday or early afternoon flight so you arrive with time to explore <span class="price-tag">€30–€80/pp</span></li>
+      <li><strong>Arrive Split.</strong> Airport → Old Town: Bus #37 (~30 min) or taxi (~€35). Drop bags, check in</li>
+      <li><strong>Afternoon: First taste of Diocletian's Palace</strong> — this isn't a ruin behind a fence. It's the actual living center of Split. 1,700 years old, with apartments, restaurants, and bars built into the Roman walls. Walk the Peristyle (the central courtyard), duck into the underground cellars <span class="price-tag">€10–€15 for cathedral + cellars</span></li>
+      <li><strong>Sunset: Walk the Riva</strong> — Split's famous waterfront promenade. Palm trees, cafe terraces, the harbor, the mountains across the water. Your first Adriatic sunset as a couple</li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Konoba+Matejuska+Split" target="_blank">Konoba Matejuska</a></strong> — tiny family-run konoba (tavern) right on the harbor. Dalmatian seafood, grilled fish, local wine. No-frills, incredible quality. The perfect first night <span class="price-tag">$$</span></li>
+      <li><strong>After dinner:</strong> The palace comes alive at night — live music often echoes through the Peristyle. Walk through the narrow stone streets with a gelato. <strong><a href="https://www.google.com/maps/search/Paradox+Wine+Bar+Split" target="_blank">Paradox Wine & Cheese Bar</a></strong> for Croatian natural wines</li>
+    </ul>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ═══════════════ PART 2: CROATIA ═══════════════ -->
+  <div class="phase-banner croatia" id="croatia">
+    <div>
+      <h2>Part 2: Croatia</h2>
+      <p>May 30 – June 7 &nbsp;|&nbsp; Tre & Rory</p>
+    </div>
+  </div>
+
+  <div class="info-box rose">
+    <h3>Romance Mode: Activated</h3>
+    <p>This is your week. The Dalmatian Coast is one of the most beautiful coastlines in the world — ancient walled cities, turquoise water, lavender-scented islands, incredible seafood and wine, and sunsets that don't quit. The itinerary flows: Split → Hvar (island time) → Dubrovnik (grand finale). Every day has built-in romance but also adventure — you're not just sitting on a beach (unless you want to). With the extra day from flying same-day, you now get two full days in Dubrovnik for the grand finale.</p>
+  </div>
+
+  <!-- DAY 9: SPLIT FULL DAY -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge croatia">Sun, May 31</span>
+      <span class="day-theme">Split: Deep Dive & Adventure</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>Full day in Split. Morning culture, afternoon adventure. This city has more layers than you'd expect.</p>
+    <ul>
+      <li><strong>Morning:</strong> Wander the neighborhoods outside the palace walls — <strong>Varos</strong> is an old fisherman's quarter with steep stone streets and laundry lines, barely any tourists. Walk up to <strong>Marjan Hill</strong> for forest trails and panoramic views of the city, islands, and coast. The path starts near the waterfront and takes ~20 min to the first viewpoint <span class="price-tag">Free</span></li>
+      <li><strong>Brunch/Lunch: <a href="https://www.google.com/maps/search/Bokeria+Kitchen+Split" target="_blank">Bokeria Kitchen & Wine Bar</a></strong> — farm-to-table Mediterranean in a stylish setting near the fish market <span class="price-tag">$$</span></li>
+      <li><strong>Afternoon Option A: Sea kayaking</strong> — paddle along the Split coastline, past Marjan Hill, to hidden beaches and a cliff bar. Guided tours run ~3 hours and are a great way to see the coast from the water <span class="price-tag">€35–€50/pp</span></li>
+      <li><strong>Afternoon Option B: Day trip to <a href="https://www.google.com/maps/search/Krka+National+Park+Croatia" target="_blank">Krka National Park</a></strong> — stunning waterfalls you can actually swim beneath. About 1.5 hours from Split by bus. Otherworldly. Only worth it if you start early or extend the day <span class="price-tag">€30/pp entry + €15 bus</span></li>
+      <li><strong>Afternoon Option C:</strong> Beach time at <strong>Bacvice Beach</strong> (fun, lively, close to center) or <strong>Kasjuni Beach</strong> (quieter, pine trees, turquoise water, underneath Marjan Hill) <span class="price-tag">Free</span></li>
+      <li><strong>Pre-dinner:</strong> <strong><a href="https://www.google.com/maps/search/Green+Market+Split" target="_blank">Split's Green Market (Pazar)</a></strong> — open-air market next to the palace walls. Local cheese, olives, dried figs, lavender. Pick up snacks for the ferry tomorrow</li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Zoi+Restaurant+Split" target="_blank">Zoi Restaurant</a></strong> — romantic rooftop terrace, creative Croatian cuisine, excellent wine list. Or <strong><a href="https://www.google.com/maps/search/Villa+Spiza+Split" target="_blank">Villa Spiza</a></strong> — tiny, no-menu spot where the chef tells you what's good today. Locals' favorite <span class="price-tag">$$–$$$</span></li>
+      <li><strong>Nightcap:</strong> <strong><a href="https://www.google.com/maps/search/D16+Coffee+Bar+Split" target="_blank">D16</a></strong> for cocktails with a palace view, or find a Riva-side bar and just sit with the water</li>
+    </ul>
+  </div>
+
+  <!-- DAY 10: FERRY TO HVAR -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge travel-badge">Mon, Jun 1</span>
+      <span class="day-theme">Ferry to Hvar — Island Time Begins</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>Catch the morning catamaran to Hvar. One hour across turquoise water, and you step off onto one of the most beautiful islands in the world (literally — Condé Nast said so). Hvar Town is lavender, stone, and light.</p>
+    <ul>
+      <li><strong>Morning catamaran: Split → Hvar Town</strong> — ~1 hour. KRILO, Jadrolinija, or TP Line. Buy tickets on <a href="https://www.ferryhopper.com" target="_blank">Ferryhopper</a> a few days ahead <span class="price-tag">€10–€25/pp</span></li>
+      <li><strong>Check in, explore Hvar Town:</strong> Drop your bags, then walk the main square (one of the largest and most beautiful in all of Dalmatia). Wander the marble streets, peek into churches, climb the fortress above town for panoramic views</li>
+      <li><strong>Afternoon: Climb to the <a href="https://www.google.com/maps/search/Fortica+Fortress+Hvar" target="_blank">Spanish Fortress (Fortica)</a></strong> — 15-min walk up from town. The views of the harbor, the Pakleni Islands, and the open Adriatic are staggering. Best in late afternoon light <span class="price-tag">€8/pp</span></li>
+      <li><strong>Beach time:</strong> Walk or water taxi to the <strong>Pakleni Islands</strong> — a chain of tiny forested islands just offshore with hidden coves, beach bars, and crystal water. <strong>Palmizana</strong> is the most popular (art gallery + restaurant + beach) <span class="price-tag">€10–€15 water taxi</span></li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Gariful+Restaurant+Hvar" target="_blank">Gariful</a></strong> — right on the harbor, lobster and seafood with boats bobbing beside your table. Splurge night. Or <strong><a href="https://www.google.com/maps/search/Dalmatino+Restaurant+Hvar" target="_blank">Dalmatino</a></strong> — romantic stone courtyard, locally caught fish, excellent Hvar wines <span class="price-tag">$$$</span></li>
+      <li><strong>After dinner:</strong> Hvar has the best nightlife on the Adriatic. <strong><a href="https://www.google.com/maps/search/Hula+Hula+Beach+Bar+Hvar" target="_blank">Hula Hula Beach Bar</a></strong> — legendary sunset/cocktail bar on the rocks. Or <strong><a href="https://www.google.com/maps/search/Carpe+Diem+Beach+Hvar" target="_blank">Carpe Diem Beach</a></strong> on Stipanska island (water taxi from harbor) for a true island club experience</li>
+    </ul>
+  </div>
+
+  <!-- DAY 11: HVAR ISLAND -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge croatia">Tue, Jun 2</span>
+      <span class="day-theme">Hvar: Lavender, Wine & Sea</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>The interior of Hvar Island is rolling hills of lavender, ancient vineyards, and abandoned stone villages. Today is about exploring beyond the town — rent a scooter or car and see the island.</p>
+    <ul>
+      <li><strong>Rent a scooter or small car for the day</strong> — this is the best way to explore. The island is ~70 km long with one main road and tiny side roads leading to hidden beaches and villages <span class="price-tag">€30–€50 scooter / €50–€80 car</span></li>
+      <li><strong>Drive to Stari Grad</strong> — the oldest town in Croatia (2,400 years old, founded by Greeks). The <strong>Stari Grad Plain</strong> is a UNESCO World Heritage Site — ancient agricultural plots still in use, divided by stone walls built by Greek colonists. Surreal</li>
+      <li><strong>Wine tasting:</strong> Stop at a winery in the interior — Hvar produces excellent wines, especially the indigenous red <strong>Plavac Mali</strong>. <strong><a href="https://www.google.com/maps/search/Tomic+Winery+Hvar" target="_blank">Tomić Winery</a></strong> near Jelsa is a great option — cellar tour + tasting with vineyard views <span class="price-tag">€15–€25/pp</span></li>
+      <li><strong>Lunch at a konoba in the interior:</strong> Find a tiny family-run tavern in one of the hilltop villages. Grilled lamb, local cheese, homemade bread, house wine. This is the real Croatia <span class="price-tag">$–$$</span></li>
+      <li><strong>Afternoon: Hidden beach hunt</strong> — the south side of the island has dozens of secluded coves. <strong>Dubovica</strong> is one of the most beautiful — a pebble beach in a turquoise bay surrounded by pines. Bring a towel and snacks</li>
+      <li><strong>Return to Hvar Town for sunset.</strong> <strong>Hula Hula</strong> again for sunset drinks — it never gets old</li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Konoba+Menego+Hvar" target="_blank">Konoba Menego</a></strong> — rustic stone tavern with communal plates of Dalmatian specialties. Local cheese, anchovies, grilled octopus, capers <span class="price-tag">$$</span></li>
+    </ul>
+  </div>
+
+  <!-- DAY 12: HVAR BEACH/RELAX -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge croatia">Wed, Jun 3</span>
+      <span class="day-theme">Hvar: Beach Day & Romance</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>Low-key day before the ferry to Dubrovnik tomorrow. Beach, swim, eat, repeat. This is your recharge day.</p>
+    <ul>
+      <li><strong>Sleep in.</strong> Grab croissants and coffee from a bakery near the harbor</li>
+      <li><strong>Pakleni Islands beach day:</strong> Water taxi to <strong>Palmizana</strong> or <strong>Jerolim</strong> (quieter, more secluded). Swim in the Adriatic, lie on warm rocks, read a book, exist <span class="price-tag">€10–€15 water taxi</span></li>
+      <li><strong>Lunch on the island:</strong> <strong>Toto's</strong> on Palmizana is famous — Mediterranean food in a garden setting surrounded by sculpture</li>
+      <li><strong>Afternoon: Couples massage or spa</strong> at your hotel, or find a local wellness center. Hvar has lavender-infused everything <span class="price-tag">€50–€100/pp</span></li>
+      <li><strong>Golden hour:</strong> Walk the coastal path from Hvar Town toward the Franciscan Monastery — quiet, pine-scented, water views. Perfect for holding hands and talking about the trip</li>
+      <li><strong>Romantic dinner: <a href="https://www.google.com/maps/search/Giaxa+Heritage+Hotel+Restaurant+Hvar" target="_blank">Giaxa</a></strong> — candlelit courtyard in a heritage building, tasting menus with Hvar wines. One of the most romantic dinner settings on the island <span class="price-tag">$$$</span></li>
+      <li><strong>Pack for Dubrovnik.</strong> Morning ferry tomorrow — set an alarm</li>
+    </ul>
+  </div>
+
+  <!-- DAY 13: HVAR → DUBROVNIK -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge travel-badge">Thu, Jun 4</span>
+      <span class="day-theme">Ferry to Dubrovnik — The Grand Finale</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>The catamaran to Dubrovnik is a journey in itself — 3+ hours down the Dalmatian Coast, passing islands, fishing villages, and eventually the unmistakable walled city rising from the sea.</p>
+    <ul>
+      <li><strong>Morning catamaran: Hvar → Dubrovnik</strong> — KRILO departs ~8:50 AM (3h 15min), TP Line ~10:45 AM (3h 50min). Book in advance <span class="price-tag">€25–€40/pp</span></li>
+      <li><strong>Arrive early afternoon.</strong> Check in, freshen up. Your hotel/apartment should be in or very near the Old Town walls</li>
+      <li><strong>Afternoon: Explore the Old Town on foot.</strong> Walk the Stradun (main limestone street), find the <strong>Rector's Palace</strong> (Gothic-Renaissance gem), the <strong>Franciscan Monastery</strong> (with one of the oldest pharmacies in Europe, from 1317). No agenda — just wander the side streets, stone staircases, and tiny piazzas. Save the walls walk for Saturday morning when you're fresh</li>
+      <li><strong>Sunset drinks: <a href="https://www.google.com/maps/search/Buza+Bar+Dubrovnik" target="_blank">Buža Bar</a></strong> — the famous "hole in the wall" cliff bar. You literally walk through a gap in the city walls and you're on a terrace carved into the cliffs above the sea. Cold beer, jaw-dropping views. There are two Buža bars; Bar II is the bigger, more famous one <span class="price-tag">$–$$</span></li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Pantarul+Restaurant+Dubrovnik" target="_blank">Pantarul</a></strong> — in nearby Lapad, a local favorite for modern-creative Croatian cuisine. Less touristy than Old Town spots, and the food is exceptional. Save Nautika for tomorrow's grand finale <span class="price-tag">$$–$$$</span></li>
+      <li><strong>Evening walk:</strong> The Stradun glows at night. Walk to the Old Port, watch the boats, find a quiet bench on the ramparts</li>
+    </ul>
+  </div>
+
+  <!-- DAY 14: DUBROVNIK -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge croatia">Fri, Jun 5</span>
+      <span class="day-theme">Dubrovnik: Island, Views & Explore</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>First full day in Dubrovnik. Lokrum Island in the morning, cable car for views in the afternoon, and a great dinner to set the stage for tomorrow's grand finale.</p>
+    <ul>
+      <li><strong>Morning: Lokrum Island</strong> — a 15-min ferry from the Old Port. A car-free island nature reserve with botanical gardens, a medieval monastery, peacocks walking around, a saltwater lake ("Dead Sea") perfect for swimming, and rocky coves. Pack swimsuits <span class="price-tag">€20/pp ferry round trip (includes island entry)</span></li>
+      <li><strong>Lunch back in Old Town: <a href="https://www.google.com/maps/search/Nishta+Restaurant+Dubrovnik" target="_blank">Nishta</a></strong> — creative vegetarian/vegan, surprisingly excellent <span class="price-tag">$$</span></li>
+      <li><strong>Afternoon: <a href="https://www.google.com/maps/search/Cable+Car+Dubrovnik" target="_blank">Cable car to Mt. Srd</a></strong> — panoramic views of the entire city, coast, and islands from 400m up. There's a bar/restaurant at the top. Bring your camera — this is the money shot of Dubrovnik <span class="price-tag">€27/pp round trip</span></li>
+      <li><strong>Late afternoon:</strong> Beach time at <strong>Banje Beach</strong> — right outside the Ploce Gate, views of the Old Town and Lokrum. Or find a quiet swimming spot on the rocks below the city walls <span class="price-tag">Free (or €20 for sunbed)</span></li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Proto+Restaurant+Dubrovnik" target="_blank">Proto</a></strong> — upstairs terrace, Dubrovnik's oldest fish restaurant (1886), candlelit, cathedral views <span class="price-tag">$$$</span></li>
+      <li><strong>Evening:</strong> Walk the Old Port at night, find a quiet spot on the ramparts. Tomorrow is the grand finale — rest up</li>
+    </ul>
+  </div>
+
+  <!-- DAY 15: DUBROVNIK FINAL DAY -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge croatia">Sat, Jun 6</span>
+      <span class="day-theme">Dubrovnik: Grand Finale</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>Your last full day of the entire trip. Walk the city walls in the morning golden light, then spend the afternoon at the beach and the evening at your most romantic dinner yet.</p>
+    <ul>
+      <li><strong>Morning: Walk the <a href="https://www.google.com/maps/search/Dubrovnik+City+Walls" target="_blank">City Walls</a></strong> — the #1 thing to do in Dubrovnik. A ~2 km circuit around the entire Old Town on top of medieval fortifications. Views of terracotta rooftops, the harbor, the Adriatic, and Lokrum Island. Go first thing when it opens to beat the heat and crowds <span class="price-tag">€35/pp</span></li>
+      <li><strong>Late morning: Sea kayaking around the walls</strong> — paddle underneath the city walls, around Lokrum, into sea caves. Guided tours include snorkeling stops. Seeing the walls from the water after walking on top of them is a completely different perspective <span class="price-tag">€35–€50/pp</span></li>
+      <li><strong>Lunch: <a href="https://www.google.com/maps/search/Barba+Restaurant+Dubrovnik" target="_blank">Barba</a></strong> — street food stall for octopus burgers and fish tacos. Counter service, cheap, delicious <span class="price-tag">$</span></li>
+      <li><strong>Afternoon: Beach time at Banje Beach</strong> — right outside the Ploce Gate, views of the Old Town and Lokrum. Swim in the Adriatic one last time. Or find a quiet spot on the rocks below the city walls <span class="price-tag">Free (or €20 for sunbed)</span></li>
+      <li><strong>Golden hour: <a href="https://www.google.com/maps/search/Buza+Bar+Dubrovnik" target="_blank">Buža Bar</a></strong> one final time — cold beers on the cliff as the sun sets behind the Adriatic. This is the moment</li>
+      <li><strong>Grand finale dinner: <a href="https://www.google.com/maps/search/Nautika+Restaurant+Dubrovnik" target="_blank">Nautika</a></strong> — Dubrovnik's most celebrated restaurant, perched on the city walls at the Pile Gate entrance. Seafood tasting menus, white tablecloths, fortress views. The most romantic dinner setting in the country. Or <strong><a href="https://www.google.com/maps/search/Proto+Restaurant+Dubrovnik" target="_blank">Proto</a></strong> — upstairs terrace, Dubrovnik's oldest fish restaurant (1886), candlelit, cathedral views <span class="price-tag">$$$–$$$$</span></li>
+      <li><strong>Last nightcap:</strong> <strong><a href="https://www.google.com/maps/search/D'vino+Wine+Bar+Dubrovnik" target="_blank">D'vino Wine Bar</a></strong> — Croatian wines by the glass in a cozy stone cellar. Walk the Stradun one more time. Take it slow</li>
+    </ul>
+  </div>
+
+  <!-- DAY 16: DEPART -->
+  <div class="day-card">
+    <div class="day-header">
+      <span class="day-badge travel-badge">Sun, Jun 7</span>
+      <span class="day-theme">Depart Dubrovnik</span>
+      <span class="who-tag couple">Tre & Rory</span>
+    </div>
+    <p>Depending on your flight time, you may have a relaxed morning. Dubrovnik's airport is small and close — don't stress.</p>
+    <ul>
+      <li><strong>Morning:</strong> Early coffee and pastry in the Old Town. One last walk down the Stradun before the crowds arrive. Take your time</li>
+      <li><strong>Optional: Morning swim</strong> at Banje Beach or the rocks below the walls. Swim in the Adriatic one more time</li>
+      <li><strong>To the airport:</strong> Bus or taxi from Old Town to Dubrovnik Airport (DBV), ~25 min. Atlas airport shuttle runs regularly <span class="price-tag">€5–€8 bus / €25–€35 taxi</span></li>
+      <li><strong>Fly home.</strong> Most connections go through European hubs (London, Munich, Amsterdam, Istanbul). Check Chase Sapphire portal for point redemption on connecting flights</li>
+    </ul>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ═══════════════ THE POOL ═══════════════ -->
+  <div class="pool-section" id="pool">
+    <h2>The Pool</h2>
+    <p class="pool-subtitle">Stuff to pull from in the moment — no research required</p>
+
+    <div class="pool-grid">
+
+      <div class="pool-cat">
+        <h3>Florence: Eat & Drink</h3>
+        <ul>
+          <li><strong><a href="https://www.google.com/maps/search/Trattoria+Sostanza+Florence" target="_blank">Trattoria Sostanza</a></strong> <span class="note">— butter chicken, artichoke omelet, since 1869, cash only <span class="price-tag">$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Trattoria+Mario+Florence" target="_blank">Trattoria Mario</a></strong> <span class="note">— communal tables, lunch only, pure Florentine <span class="price-tag">$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Trattoria+Sabatino+Florence" target="_blank">Trattoria Sabatino</a></strong> <span class="note">— cheapest real Tuscan food in the city <span class="price-tag">$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Trattoria+Cammillo+Florence" target="_blank">Trattoria Cammillo</a></strong> <span class="note">— 1945 Santo Spirito stalwart <span class="price-tag">$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Cibreo+Florence" target="_blank">Cibrèo</a></strong> <span class="note">— nose-to-tail pioneer, cucina povera elevated <span class="price-tag">$$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Buca+Mario+Florence" target="_blank">Buca Mario</a></strong> <span class="note">— bistecca alla fiorentina, cellar setting <span class="price-tag">$$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Il+Latini+Florence" target="_blank">Il Latini</a></strong> <span class="note">— family-style feast, hams on the ceiling <span class="price-tag">$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Mercato+Centrale+Florence" target="_blank">Mercato Centrale</a></strong> <span class="note">— food hall, lampredotto, pasta, truffle everything <span class="price-tag">$–$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Le+Volpi+e+l'Uva+Florence" target="_blank">Le Volpi e l'Uva</a></strong> <span class="note">— tiny wine bar, small producers <span class="price-tag">$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Vivoli+gelato+Florence" target="_blank">Vivoli</a></strong> <span class="note">— legendary gelato since 1929</span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Gelateria+La+Carraia+Florence" target="_blank">La Carraia</a></strong> <span class="note">— gelato by the Ponte alla Carraia</span></li>
+          <li><strong><a href="https://www.google.com/maps/search/COMPANION+Dolceamaro+Bar+Florence" target="_blank">COMPANION Dolceamaro Bar</a></strong> <span class="note">— dedicated Amaro bar, family-recipe collection <span class="price-tag">$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Manifattura+cocktail+bar+Florence" target="_blank">Manifattura</a></strong> <span class="note">— indigenous Italian liquor cocktails, Amaro Santoni <span class="price-tag">$$</span></span></li>
+        </ul>
+      </div>
+
+      <div class="pool-cat">
+        <h3>Florence: See & Do</h3>
+        <ul>
+          <li><strong><a href="https://www.uffizi.it/en/the-uffizi" target="_blank">Uffizi Gallery</a></strong> <span class="note">— Botticelli, Leonardo, Caravaggio <span class="price-tag">€20–€25</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Galleria+dell'Accademia+Florence" target="_blank">Accademia (The David)</a></strong> <span class="note">— book timed entry <span class="price-tag">€16</span></span></li>
+          <li><strong>Duomo + dome climb</strong> <span class="note">— 463 steps, insane views <span class="price-tag">€30 combo</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Palazzo+Pitti+Florence" target="_blank">Palazzo Pitti + Boboli Gardens</a></strong> <span class="note">— Medici palace <span class="price-tag">€16–€22</span></span></li>
+          <li><strong>Piazzale Michelangelo</strong> <span class="note">— best panoramic view, sunset <span class="price-tag">Free</span></span></li>
+          <li><strong>Ponte Vecchio</strong> <span class="note">— medieval bridge, goldsmiths, gorgeous at night</span></li>
+          <li><strong>San Lorenzo leather market</strong> <span class="note">— belts, bags, journals, haggle</span></li>
+          <li><strong>Oltrarno artisan workshops</strong> <span class="note">— paper, leather, wood</span></li>
+          <li><strong>Cooking class</strong> <span class="note">— pasta + tiramisu, Airbnb Experiences <span class="price-tag">€60–€90</span></span></li>
+        </ul>
+      </div>
+
+      <div class="pool-cat">
+        <h3>Dolomites: Hike & Eat</h3>
+        <ul>
+          <li><strong>Seceda ridgeline</strong> <span class="note">— most iconic Dolomites view, gondola up <span class="price-tag">€35–€40</span></span></li>
+          <li><strong>Alpe di Siusi</strong> <span class="note">— Europe's biggest Alpine meadow, gentle walks <span class="price-tag">€35</span></span></li>
+          <li><strong>Val Gardena MTB trails</strong> <span class="note">— 600 km of marked trails <span class="price-tag">€40–€70 rental</span></span></li>
+          <li><strong>Rifugio lunch</strong> <span class="note">— mountain huts with dumplings, speck, strudel <span class="price-tag">$–$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Restaurant+Tubladel+Ortisei" target="_blank">Tubladel</a></strong> <span class="note">— top restaurant in the valley <span class="price-tag">$$–$$$</span></span></li>
+          <li><strong>Anna Stuben</strong> <span class="note">— Michelin-starred, approachable <span class="price-tag">$$$$</span></span></li>
+          <li><strong>Wood-carving workshops</strong> <span class="note">— centuries-old Val Gardena tradition</span></li>
+        </ul>
+      </div>
+
+      <div class="pool-cat">
+        <h3>Venice: Eat & Drink</h3>
+        <ul>
+          <li><strong><a href="https://www.google.com/maps/search/Osteria+alle+Testiere+Venice" target="_blank">Osteria alle Testiere</a></strong> <span class="note">— 10 tables, best seafood, reserve ahead <span class="price-tag">$$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Antiche+Carampane+Venice" target="_blank">Antiche Carampane</a></strong> <span class="note">— authentic Venetian seafood <span class="price-tag">$$–$$$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/All'Arco+Venice" target="_blank">All'Arco</a></strong> <span class="note">— best cicchetti in Venice, at Rialto <span class="price-tag">$</span></span></li>
+          <li><strong><a href="https://www.google.com/maps/search/Cantina+Do+Spade+Venice" target="_blank">Cantina Do Spade</a></strong> <span class="note">— wine + cicchetti, 600 years old <span class="price-tag">$</span></span></li>
+          <li><strong>Osteria Bancogiro</strong> <span class="note">— Grand Canal terrace, Rialto <span class="price-tag">$$</span></span></li>
+          <li><strong>Ristorante Quadri</strong> <span class="note">— Michelin star, over Piazza San Marco <span class="price-tag">$$$$</span></span></li>
+          <li><strong>Il Caffè Rosso</strong> <span class="note">— cheap Spritz, great people-watching <span class="price-tag">$</span></span></li>
+          <li><strong>Amaro Nardini</strong> <span class="note">— Veneto's classic since 1779, ask at any bacaro</span></li>
+          <li><strong>Context Travel tours</strong> <span class="note">— expert-led art history walks, max 10 guests <span class="price-tag">€60–€120</span></span></li>
+        </ul>
+      </div>
+
+      <div class="pool-cat">
+        <h3>Amaro Guide</h3>
+        <ul>
+          <li><strong>Amaro Santoni</strong> <span class="note">— rare Florentine Amaro, hard to find even in Italy</span></li>
+          <li><strong>Amaro Nardini</strong> <span class="note">— Veneto classic, 1779, herbal + citrus</span></li>
+          <li><strong>Amaro del Capo</strong> <span class="note">— Calabrian, herbal, serve ice cold</span></li>
+          <li><strong>Amaro Montenegro</strong> <span class="note">— Bologna, 1885, the crowd-pleaser</span></li>
+          <li><strong>Fernet-Branca</strong> <span class="note">— Milan, intense, the "bartender's handshake"</span></li>
+          <li><strong>Averna</strong> <span class="note">— Sicily, 1868, bittersweet citrus</span></li>
+          <li><strong>South Tyrolean Alpine Amari</strong> <span class="note">— pine, gentian root, mountain herbs, ask in the Dolomites</span></li>
+          <li><strong>Ask "avete un amaro della casa?"</strong> <span class="note">— many trattorias make their own from secret family recipes</span></li>
+        </ul>
+      </div>
+
+      <div class="pool-cat">
+        <h3>Croatia: Eat & Drink</h3>
+        <ul>
+          <li><strong>Konoba Matejuska</strong> (Split) <span class="note">— family-run, harbor, seafood <span class="price-tag">$$</span></span></li>
+          <li><strong>Villa Spiza</strong> (Split) <span class="note">— no menu, chef tells you what's good <span class="price-tag">$$</span></span></li>
+          <li><strong>Zoi Restaurant</strong> (Split) <span class="note">— rooftop, creative, romantic <span class="price-tag">$$$</span></span></li>
+          <li><strong>Paradox Wine Bar</strong> (Split) <span class="note">— Croatian natural wines <span class="price-tag">$$</span></span></li>
+          <li><strong>Gariful</strong> (Hvar) <span class="note">— harbor lobster, boats beside your table <span class="price-tag">$$$</span></span></li>
+          <li><strong>Dalmatino</strong> (Hvar) <span class="note">— stone courtyard, grilled fish <span class="price-tag">$$–$$$</span></span></li>
+          <li><strong>Konoba Menego</strong> (Hvar) <span class="note">— communal Dalmatian plates <span class="price-tag">$$</span></span></li>
+          <li><strong>Hula Hula</strong> (Hvar) <span class="note">— legendary sunset cocktail bar</span></li>
+          <li><strong>Nautika</strong> (Dubrovnik) <span class="note">— city wall terrace, tasting menus <span class="price-tag">$$$$</span></span></li>
+          <li><strong>Proto</strong> (Dubrovnik) <span class="note">— terrace, oldest fish restaurant <span class="price-tag">$$$</span></span></li>
+          <li><strong>Pantarul</strong> (Dubrovnik) <span class="note">— modern creative, local fave <span class="price-tag">$$–$$$</span></span></li>
+          <li><strong>Buža Bar</strong> (Dubrovnik) <span class="note">— cliff bar through hole in the wall <span class="price-tag">$</span></span></li>
+          <li><strong>D'vino Wine Bar</strong> (Dubrovnik) <span class="note">— Croatian wines, stone cellar <span class="price-tag">$$</span></span></li>
+        </ul>
+      </div>
+
+      <div class="pool-cat">
+        <h3>Croatia: See & Do</h3>
+        <ul>
+          <li><strong>Diocletian's Palace</strong> (Split) <span class="note">— 1,700 years old, still alive <span class="price-tag">Free / €10 cellars</span></span></li>
+          <li><strong>Marjan Hill</strong> (Split) <span class="note">— forest trails, panoramic views <span class="price-tag">Free</span></span></li>
+          <li><strong>Sea kayaking</strong> (Split/Dubrovnik) <span class="note">— coastline, caves, cliffs <span class="price-tag">€35–€50</span></span></li>
+          <li><strong>Krka National Park</strong> <span class="note">— swim under waterfalls, day trip <span class="price-tag">€30 entry</span></span></li>
+          <li><strong>Pakleni Islands</strong> (Hvar) <span class="note">— water taxi to hidden coves <span class="price-tag">€10–€15</span></span></li>
+          <li><strong>Spanish Fortress</strong> (Hvar) <span class="note">— views of harbor + islands <span class="price-tag">€8</span></span></li>
+          <li><strong>Stari Grad + UNESCO Plain</strong> (Hvar) <span class="note">— 2,400-year-old Greek town</span></li>
+          <li><strong>Tomić Winery</strong> (Hvar) <span class="note">— Plavac Mali tasting <span class="price-tag">€15–€25</span></span></li>
+          <li><strong>Dubrovnik City Walls</strong> <span class="note">— 2 km circuit, #1 thing to do <span class="price-tag">€35</span></span></li>
+          <li><strong>Lokrum Island</strong> <span class="note">— monastery, peacocks, salt lake <span class="price-tag">€20</span></span></li>
+          <li><strong>Mt. Srd cable car</strong> <span class="note">— panoramic city views <span class="price-tag">€27</span></span></li>
+          <li><strong>Dubrovnik sea kayaking</strong> <span class="note">— paddle under the walls <span class="price-tag">€35–€50</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════ TIPS ═══════════════ -->
+  <div class="tips-section" id="tips">
+    <h2>Quick Tips</h2>
+    <ul>
+      <li><strong>Book museums and restaurants NOW.</strong> Uffizi, Accademia, and the Duomo dome climb sell out weeks ahead. Same for top restaurants — Osteria alle Testiere, Trattoria Sostanza, and Nautika all need reservations</li>
+      <li><strong>Trains in Italy:</strong> Book on <a href="https://www.thetrainline.com" target="_blank">Trainline</a> or <a href="https://www.trenitalia.com" target="_blank">Trenitalia</a> 2–3 months ahead for the best prices. Frecciarossa (red) is the fast train. Italo (maroon) is the competing fast train. Both are great</li>
+      <li><strong>Croatia ferries:</strong> Book catamaran tickets on <a href="https://www.ferryhopper.com" target="_blank">Ferryhopper</a> at least a week ahead in summer. They fill up, especially Split→Hvar and Hvar→Dubrovnik</li>
+      <li><strong>Money:</strong> Italy and Croatia both use the Euro. Cards are accepted almost everywhere, but carry some cash for market vendors, small trattorias, and tips</li>
+      <li><strong>Chase Sapphire:</strong> Use it for flights (transfer points to airline partners for better value), hotels via the Chase travel portal, and as your primary card abroad — no foreign transaction fees, trip protection built in</li>
+      <li><strong>Water:</strong> Tap water is safe to drink in Italy and Croatia. Bring a refillable bottle. Florence has public drinking fountains (nasoni) everywhere</li>
+      <li><strong>Weather (late May – early June):</strong> Italy: 70–85°F, sunny, low rain chance. Dolomites: 55–70°F, cooler at altitude, bring a layer. Croatia: 75–85°F, sunny, great swimming weather. Sunscreen everywhere</li>
+      <li><strong>Packing note:</strong> Comfortable walking shoes are essential — Florence cobblestones, Dolomites trails, Venice bridges (300+ with steps), Croatian old towns. One pair of dressier shoes for nice dinners. Quick-dry swimsuit for Croatia</li>
+      <li><strong>For Jenny:</strong> Carry a light scarf/shawl — useful for church dress codes (shoulders covered), sun protection, and staying warm in air conditioning or mountain gondolas. Stay hydrated — carry water and electrolytes. Most restaurants are happy to accommodate dietary needs</li>
+      <li><strong>Disc golf:</strong> There isn't a strong disc golf scene in these specific destinations, unfortunately. If you find a course near any of the stops, it'd be a bonus — but don't plan around it. Save the disc golf energy for mountain biking in the Dolomites and sea kayaking in Croatia</li>
+      <li><strong>Budget hack:</strong> In Italy, eat lunch as your big meal — many restaurants offer pranzo (lunch) menus at lower prices than dinner. In Croatia, konobas (family taverns) are always the best value</li>
+      <li><strong>Tipping:</strong> Italy: not expected but €1–2 appreciated. Croatia: 10% at restaurants is standard. Neither country has a strong tipping culture compared to the US</li>
+    </ul>
+  </div>
+
+  <div class="info-box warm">
+    <h3>Estimated Budget Snapshot (Per Couple)</h3>
+    <p><strong>Flights:</strong> $1,000–$1,800/person round trip (varies hugely by booking time and route)</p>
+    <p><strong>Accommodation (16 nights):</strong> $2,400–$4,500 total (mixing budget-cute and mid-range)</p>
+    <p><strong>Trains + ferries + local transport:</strong> $300–$500 total for both of you</p>
+    <p><strong>Food & drink:</strong> $80–$150/day for two (mix of trattorias, konobas, and a few splurge dinners)</p>
+    <p><strong>Activities & museums:</strong> $400–$700 total for both of you</p>
+    <p><strong>Ballpark total per couple:</strong> $5,500–$9,000 (flights not included) depending on accommodation choices and splurge level. The budget-cute tier is very doable and still excellent quality.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
