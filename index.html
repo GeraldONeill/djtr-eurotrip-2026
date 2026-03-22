@@ -8,6 +8,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Cormorant+Garamond:wght@600;700&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 48px; }
 
   body {
     font-family: 'Inter', sans-serif;
@@ -48,32 +49,43 @@
   }
 
   /* ── NAV TABS ── */
-  .nav-tabs {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 32px;
-    flex-wrap: wrap;
+  .sticky-nav {
     position: sticky;
     top: 0;
-    background: #faf8f5;
-    padding: 12px 0;
     z-index: 100;
-    border-bottom: 1px solid #eee;
+    background: #2c1810;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  .nav-tab {
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-size: 0.85em;
-    font-weight: 600;
-    cursor: pointer;
-    border: 2px solid #ddd;
-    background: white;
-    color: #555;
+  .sticky-nav::-webkit-scrollbar { display: none; }
+
+  .sticky-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: max-content;
+    justify-content: center;
+  }
+
+  .sticky-nav ul li a {
+    display: block;
+    padding: 14px 22px;
+    color: rgba(255,255,255,0.7);
     text-decoration: none;
-    transition: all 0.2s;
+    font-size: 0.95em;
+    font-weight: 500;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+    transition: color 0.2s, background 0.2s;
   }
-  .nav-tab:hover { border-color: #c17d3e; color: #c17d3e; text-decoration: none; }
-  .nav-tab.active { background: #8b4513; color: white; border-color: #8b4513; }
+
+  .sticky-nav ul li a:hover,
+  .sticky-nav ul li a.active {
+    color: white;
+    background: rgba(255,255,255,0.1);
+  }
 
   /* ── PHASE BANNER ── */
   .phase-banner {
@@ -362,8 +374,10 @@
   @media (max-width: 600px) {
     .pool-grid { grid-template-columns: 1fr; }
     .hero h1 { font-size: 2em; }
-    .nav-tabs { gap: 4px; }
-    .nav-tab { padding: 6px 12px; font-size: 0.78em; }
+    .sticky-nav ul li a {
+      padding: 12px 14px;
+      font-size: 0.88em;
+    }
   }
 
   .pool-cat h3 {
@@ -508,20 +522,21 @@
   <div class="subtitle">May 23 – June 7, 2026 &nbsp;|&nbsp; Family + Couples Trip Guide</div>
 </div>
 
-<div class="container">
+<nav class="sticky-nav">
+  <ul>
+    <li><a href="#calendar">Calendar</a></li>
+    <li><a href="#logistics">Logistics</a></li>
+    <li><a href="#accommodations">Stays</a></li>
+    <li><a href="#florence">Florence</a></li>
+    <li><a href="#dolomites">Dolomites</a></li>
+    <li><a href="#venice">Venice</a></li>
+    <li><a href="#croatia">Croatia</a></li>
+    <li><a href="#pool">The Pool</a></li>
+    <li><a href="#tips">Tips</a></li>
+  </ul>
+</nav>
 
-  <!-- NAVIGATION -->
-  <div class="nav-tabs">
-    <a href="#calendar" class="nav-tab">Calendar</a>
-    <a href="#logistics" class="nav-tab">Logistics & Booking</a>
-    <a href="#accommodations" class="nav-tab">Accommodations</a>
-    <a href="#florence" class="nav-tab">Florence</a>
-    <a href="#dolomites" class="nav-tab">Dolomites</a>
-    <a href="#venice" class="nav-tab">Venice</a>
-    <a href="#croatia" class="nav-tab">Croatia</a>
-    <a href="#pool" class="nav-tab">The Pool</a>
-    <a href="#tips" class="nav-tab">Tips</a>
-  </div>
+<div class="container">
 
   <!-- HEALTH NOTE FOR JENNY -->
   <div class="health-note">
@@ -1323,5 +1338,18 @@
 
 </div>
 
+<script>
+  const sections = document.querySelectorAll('[id]');
+  const navLinks = document.querySelectorAll('.sticky-nav a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 60) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
 </body>
 </html>
