@@ -490,24 +490,6 @@
     justify-content: center;
   }
 
-  /* ── HEALTH NOTE ── */
-  .health-note {
-    background: #f5efe8;
-    border-left: 4px solid #a07850;
-    padding: 20px 24px;
-    border-radius: 0 12px 12px 0;
-    margin-bottom: 28px;
-    font-size: 0.93em;
-  }
-  .health-note h3 {
-    color: #8b6540;
-    margin-bottom: 6px;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .health-note p { color: #555; margin-bottom: 6px; }
-  .health-note p:last-child { margin-bottom: 0; }
 
   hr.section-divider {
     border: none;
@@ -540,11 +522,6 @@
 
 <div class="container">
 
-  <!-- HEALTH NOTE FOR JENNY -->
-  <div class="health-note">
-    <h3>Jenny's Health — Planning Notes</h3>
-    <p>Jenny has chemo sessions bookending this trip (mid-May before departure, early June after Italy). She's a lifelong hiker and adventurer — the itinerary doesn't hold back. That said, it's built with day-to-day flexibility so she can push hard or ease off depending on how she's feeling. Restaurants are chosen with variety in mind, and Jenny can enjoy all the flavors even with limited alcohol — little sips of Chianti, a taste of the local Amaro. The main things to stay on top of are hydration and sunscreen.</p>
-  </div>
 
   <!-- ═══════════════ CALENDAR VIEW ═══════════════ -->
   <div class="calendar-section" id="calendar">
@@ -552,17 +529,15 @@
 
     <div class="cal-grid">
       <!-- Week headers -->
-      <div class="cal-header">Sat</div>
-      <div class="cal-header">Sun</div>
       <div class="cal-header">Mon</div>
       <div class="cal-header">Tue</div>
       <div class="cal-header">Wed</div>
       <div class="cal-header">Thu</div>
       <div class="cal-header">Fri</div>
+      <div class="cal-header">Sat</div>
+      <div class="cal-header">Sun</div>
 
-      <!-- Week 0: May 9–15 (D/J Prologue) -->
-      <div class="cal-day empty"></div>
-      <div class="cal-day empty"></div>
+      <!-- Week 1: May 14–17 (D/J Arrive; Mon–Sun) -->
       <div class="cal-day empty"></div>
       <div class="cal-day empty"></div>
       <div class="cal-day empty"></div>
@@ -574,8 +549,6 @@
         <span class="date">15</span>
         <span class="cal-label">Monterosso → Vernazza</span>
       </div>
-
-      <!-- Week 0.5: May 16–22 (D/J Cinque Terre) -->
       <div class="cal-day dj-solo">
         <span class="date">16</span>
         <span class="cal-label">Vernazza → Corniglia</span>
@@ -584,6 +557,8 @@
         <span class="date">17</span>
         <span class="cal-label">Corniglia → Manarola</span>
       </div>
+
+      <!-- Week 2: May 18–24 (D/J Cinque Terre + Florence) -->
       <div class="cal-day dj-solo">
         <span class="date">18</span>
         <span class="cal-label">Via dell'Amore + Riomaggiore</span>
@@ -604,8 +579,6 @@
         <span class="date">22</span>
         <span class="cal-label">D/J → Florence</span>
       </div>
-
-      <!-- Week 1: May 23–29 (All Four) -->
       <div class="cal-day travel">
         <span class="date">23</span>
         <span class="cal-label">Arrive Florence</span>
@@ -614,6 +587,8 @@
         <span class="date">24</span>
         <span class="cal-label">Florence: Renaissance Day</span>
       </div>
+
+      <!-- Week 3: May 25–31 (Italy — All Four + Croatia begins) -->
       <div class="cal-day italy-fam">
         <span class="date">25</span>
         <span class="cal-label">Florence: Oltrarno & Food</span>
@@ -634,8 +609,6 @@
         <span class="date">29</span>
         <span class="cal-label">Venice: Canals & Culture</span>
       </div>
-
-      <!-- Week 2: May 30–Jun 5 -->
       <div class="cal-day travel">
         <span class="date">30</span>
         <span class="cal-label">Farewell; Fly to Split</span>
@@ -644,6 +617,8 @@
         <span class="date">31</span>
         <span class="cal-label">Split: Deep Dive</span>
       </div>
+
+      <!-- Week 4: Jun 1–7 (Croatia — Tre & Rory) -->
       <div class="cal-day travel">
         <span class="date">Jun 1</span>
         <span class="cal-label">Ferry to Hvar</span>
@@ -664,8 +639,6 @@
         <span class="date">5</span>
         <span class="cal-label">Dubrovnik: Lokrum & Explore</span>
       </div>
-
-      <!-- Week 3: Jun 6–7 -->
       <div class="cal-day croatia-rom">
         <span class="date">6</span>
         <span class="cal-label">Dubrovnik: Grand Finale</span>
@@ -674,11 +647,6 @@
         <span class="date">7</span>
         <span class="cal-label">Depart Dubrovnik</span>
       </div>
-      <div class="cal-day empty"></div>
-      <div class="cal-day empty"></div>
-      <div class="cal-day empty"></div>
-      <div class="cal-day empty"></div>
-      <div class="cal-day empty"></div>
     </div>
 
     <div class="cal-legend">
@@ -1157,7 +1125,7 @@
       <li><strong>First stop: Piazzale Michelangelo</strong> for the iconic panoramic sunset view over the city — the Duomo, Ponte Vecchio, the Arno, the hills. Best first impression of Florence you can get. It's a 15-min walk uphill from the center, or a quick taxi <span class="price-tag">Free</span></li>
       <li><strong>Dinner: <a href="https://www.google.com/maps/search/Trattoria+Sostanza+Florence" target="_blank">Trattoria Sostanza</a></strong> — a cozy, old-school single-room trattoria. Order the butter chicken and the artichoke omelet. Cash only, no reservations, arrive by 7:30 PM or you're waiting. It's been open since 1869 and hasn't changed <span class="price-tag">$$</span></li>
       <li><strong>Alternative dinner: <a href="https://www.google.com/maps/search/Trattoria+Mario+Florence" target="_blank">Trattoria Mario</a></strong> — communal tables, pure Florentine cooking, loud and energetic. Lunch-only normally, but worth knowing about for tomorrow <span class="price-tag">$</span></li>
-      <li><strong>After dinner:</strong> Walk over the Ponte Vecchio at night (it's gorgeous lit up), grab gelato at <strong><a href="https://www.google.com/maps/search/Vivoli+gelato+Florence" target="_blank">Vivoli</a></strong> or <strong><a href="https://www.google.com/maps/search/Gelateria+La+Carraia+Florence" target="_blank">La Carraia</a></strong>, and call it a night. Jenny — perfect first night: low energy, high reward</li>
+      <li><strong>After dinner:</strong> Walk over the Ponte Vecchio at night (it's gorgeous lit up), grab gelato at <strong><a href="https://www.google.com/maps/search/Vivoli+gelato+Florence" target="_blank">Vivoli</a></strong> or <strong><a href="https://www.google.com/maps/search/Gelateria+La+Carraia+Florence" target="_blank">La Carraia</a></strong>, and call it a night</li>
     </ul>
   </div>
 
@@ -1172,12 +1140,12 @@
     <ul>
       <li><strong>Morning: <a href="https://www.uffizi.it/en/the-uffizi" target="_blank">Uffizi Gallery</a></strong> — Botticelli's Birth of Venus, Caravaggio, Leonardo, Raphael. Book timed-entry tickets in advance (they sell out). Go early to beat the crowds. Allow 2–3 hours <span class="price-tag">€20–€25/pp</span></li>
       <li><strong>Mid-morning break:</strong> Coffee and a pastry at a cafe near the Piazza della Signoria. Sit outside, people-watch, absorb the open-air sculpture gallery that is the piazza itself</li>
-      <li><strong>Late morning: The Duomo complex</strong> — the cathedral is free to enter. The <strong>Brunelleschi's Dome climb</strong> (463 steps) has insane views but is strenuous — Dan, Tre, and Rory could do this while Jenny explores the Baptistery and the museum at ground level. Or everyone skips the climb and just admires from the piazza <span class="price-tag">€30/pp for dome + museum combo</span></li>
+      <li><strong>Late morning: The Duomo complex</strong> — the cathedral is free to enter. The <strong>Brunelleschi's Dome climb</strong> (463 steps) has insane views — absolutely do this. Book in advance <span class="price-tag">€30/pp for dome + museum combo</span></li>
       <li><strong>Lunch: <a href="https://www.google.com/maps/search/Mercato+Centrale+Florence" target="_blank">Mercato Centrale</a></strong> (Central Market) — the upstairs food hall has incredible stalls: lampredotto sandwiches, fresh pasta, truffled everything, local wine by the glass. Casual, delicious, everyone picks what they want <span class="price-tag">$–$$</span></li>
       <li><strong>Afternoon: <a href="https://www.google.com/maps/search/Galleria+dell'Accademia+Florence" target="_blank">Galleria dell'Accademia</a></strong> — home of Michelangelo's David. Book tickets in advance. It's smaller than the Uffizi so 1–1.5 hours is plenty <span class="price-tag">€16/pp</span></li>
       <li><strong>Late afternoon:</strong> Stroll through the leather market at <strong>San Lorenzo</strong> — great for gifts, belts, bags, journals. Haggle a little</li>
-      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Buca+Mario+Florence" target="_blank">Buca Mario</a></strong> — Florentine bistecca (T-bone steak), rustic cellar atmosphere, one of the oldest restaurants in Florence (1886). Share the bistecca alla fiorentina for the table. Jenny can enjoy the pastas and sides — incredible ribollita <span class="price-tag">$$$</span></li>
-      <li><strong>Wine after dinner:</strong> <strong><a href="https://www.google.com/maps/search/Le+Volpi+e+l'Uva+Florence" target="_blank">Le Volpi e l'Uva</a></strong> — tiny wine bar near Ponte Vecchio, curated selection of small Italian producers. A few sips for Jenny, full pours for the rest <span class="price-tag">$$</span></li>
+      <li><strong>Dinner: <a href="https://www.google.com/maps/search/Buca+Mario+Florence" target="_blank">Buca Mario</a></strong> — Florentine bistecca (T-bone steak), rustic cellar atmosphere, one of the oldest restaurants in Florence (1886). Share the bistecca alla fiorentina for the table. Also incredible ribollita <span class="price-tag">$$$</span></li>
+      <li><strong>Wine after dinner:</strong> <strong><a href="https://www.google.com/maps/search/Le+Volpi+e+l'Uva+Florence" target="_blank">Le Volpi e l'Uva</a></strong> — tiny wine bar near Ponte Vecchio, curated selection of small Italian producers. Curated pours of small Italian producers <span class="price-tag">$$</span></li>
       <li><strong>Amaro nightcap:</strong> Ask for a digestivo wherever you end up — Florence is the spiritual home of Amaro. Try <strong>Amaro del Capo</strong> (Calabrian, herbal) or <strong>Amaro Santoni</strong> (a rare, truly local Florentine Amaro that's hard to find even in Italy). Also ask about <strong>Amaro dell'Erborista</strong> — small-batch, family-recipe Amari from Tuscan herbalists. Many trattorias will have their own house Amaro made from secret recipes. Always ask "avete un amaro della casa?"</li>
     </ul>
   </div>
@@ -1628,7 +1596,7 @@
       <li><strong>Water:</strong> Tap water is safe to drink in Italy and Croatia. Bring a refillable bottle. Florence has public drinking fountains (nasoni) everywhere</li>
       <li><strong>Weather (late May – early June):</strong> Italy: 70–85°F, sunny, low rain chance. Dolomites: 55–70°F, cooler at altitude, bring a layer. Croatia: 75–85°F, sunny, great swimming weather. Sunscreen everywhere</li>
       <li><strong>Packing note:</strong> Comfortable walking shoes are essential — Florence cobblestones, Dolomites trails, Venice bridges (300+ with steps), Croatian old towns. One pair of dressier shoes for nice dinners. Quick-dry swimsuit for Croatia</li>
-      <li><strong>For Jenny:</strong> Carry a light scarf/shawl — useful for church dress codes (shoulders covered), sun protection, and staying warm in air conditioning or mountain gondolas. Stay hydrated — carry water and electrolytes. Most restaurants are happy to accommodate dietary needs</li>
+      <li><strong>Church dress codes:</strong> Shoulders and knees must be covered in Italian churches (including the Duomo, St. Mark's, etc.). Carry a light scarf or shawl — doubles as sun protection and a layer for mountain gondolas</li>
       <li><strong>Disc golf:</strong> There isn't a strong disc golf scene in these specific destinations, unfortunately. If you find a course near any of the stops, it'd be a bonus — but don't plan around it. Save the disc golf energy for mountain biking in the Dolomites and sea kayaking in Croatia</li>
       <li><strong>Budget hack:</strong> In Italy, eat lunch as your big meal — many restaurants offer pranzo (lunch) menus at lower prices than dinner. In Croatia, konobas (family taverns) are always the best value</li>
       <li><strong>Tipping:</strong> Italy: not expected but €1–2 appreciated. Croatia: 10% at restaurants is standard. Neither country has a strong tipping culture compared to the US</li>
